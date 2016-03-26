@@ -28,18 +28,20 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
             this.play = new System.Windows.Forms.Button();
             this.pause = new System.Windows.Forms.Button();
             this.skipforward = new System.Windows.Forms.Button();
             this.skipback = new System.Windows.Forms.Button();
             this.volumedown = new System.Windows.Forms.Button();
             this.volumeup = new System.Windows.Forms.Button();
+            this.progressBar = new System.Windows.Forms.ProgressBar();
             this.SuspendLayout();
             // 
             // play
             // 
             this.play.AutoSize = true;
-            this.play.Image = global::HMM_P3.Properties.Resources.PlayButton;
+            this.play.Image = ((System.Drawing.Image)(resources.GetObject("play.Image")));
             this.play.Location = new System.Drawing.Point(148, 500);
             this.play.Margin = new System.Windows.Forms.Padding(0);
             this.play.Name = "play";
@@ -51,7 +53,7 @@
             // pause
             // 
             this.pause.AutoSize = true;
-            this.pause.Image = global::HMM_P3.Properties.Resources.PauseButton;
+            this.pause.Image = ((System.Drawing.Image)(resources.GetObject("pause.Image")));
             this.pause.Location = new System.Drawing.Point(286, 500);
             this.pause.Margin = new System.Windows.Forms.Padding(0);
             this.pause.Name = "pause";
@@ -63,7 +65,7 @@
             // skipforward
             // 
             this.skipforward.AutoSize = true;
-            this.skipforward.Image = global::HMM_P3.Properties.Resources.SkipForwardButton;
+            this.skipforward.Image = ((System.Drawing.Image)(resources.GetObject("skipforward.Image")));
             this.skipforward.Location = new System.Drawing.Point(424, 500);
             this.skipforward.Margin = new System.Windows.Forms.Padding(0);
             this.skipforward.Name = "skipforward";
@@ -75,7 +77,7 @@
             // skipback
             // 
             this.skipback.AutoSize = true;
-            this.skipback.Image = global::HMM_P3.Properties.Resources.SkipBackButton;
+            this.skipback.Image = ((System.Drawing.Image)(resources.GetObject("skipback.Image")));
             this.skipback.Location = new System.Drawing.Point(10, 500);
             this.skipback.Margin = new System.Windows.Forms.Padding(0);
             this.skipback.Name = "skipback";
@@ -87,7 +89,7 @@
             // volumedown
             // 
             this.volumedown.AutoSize = true;
-            this.volumedown.Image = global::HMM_P3.Properties.Resources.VolumeDownButton;
+            this.volumedown.Image = ((System.Drawing.Image)(resources.GetObject("volumedown.Image")));
             this.volumedown.Location = new System.Drawing.Point(562, 500);
             this.volumedown.Margin = new System.Windows.Forms.Padding(0);
             this.volumedown.Name = "volumedown";
@@ -99,7 +101,7 @@
             // volumeup
             // 
             this.volumeup.AutoSize = true;
-            this.volumeup.Image = global::HMM_P3.Properties.Resources.VolumeUpButton;
+            this.volumeup.Image = ((System.Drawing.Image)(resources.GetObject("volumeup.Image")));
             this.volumeup.Location = new System.Drawing.Point(700, 500);
             this.volumeup.Margin = new System.Windows.Forms.Padding(0);
             this.volumeup.Name = "volumeup";
@@ -108,11 +110,22 @@
             this.volumeup.UseVisualStyleBackColor = true;
             this.volumeup.Click += new System.EventHandler(this.volumeup_Click);
             // 
+            // progressBar
+            // 
+            this.progressBar.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
+            this.progressBar.ForeColor = System.Drawing.SystemColors.InfoText;
+            this.progressBar.Location = new System.Drawing.Point(148, 467);
+            this.progressBar.Name = "progressBar";
+            this.progressBar.Size = new System.Drawing.Size(548, 25);
+            this.progressBar.TabIndex = 10;
+            this.progressBar.Click += new System.EventHandler(this.progressBar_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(847, 667);
+            this.ClientSize = new System.Drawing.Size(847, 649);
+            this.Controls.Add(this.progressBar);
             this.Controls.Add(this.volumeup);
             this.Controls.Add(this.volumedown);
             this.Controls.Add(this.skipback);
@@ -135,6 +148,7 @@
         private System.Windows.Forms.Button skipback;
         private System.Windows.Forms.Button volumedown;
         private System.Windows.Forms.Button volumeup;
+        private System.Windows.Forms.ProgressBar progressBar;
     }
 }
 
