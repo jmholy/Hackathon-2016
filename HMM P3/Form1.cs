@@ -34,7 +34,7 @@ namespace HMM_P3
 
         private void play_Click(object sender, EventArgs e)
         {
-            
+            play.BackgroundImage = ((System.Drawing.Image)(Properties.Resources.PlayButton));
         }
 
         private void pause_Click(object sender, EventArgs e)

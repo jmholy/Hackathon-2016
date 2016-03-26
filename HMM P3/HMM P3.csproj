@@ -64,6 +64,7 @@
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
     </Compile>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
@@ -99,6 +100,11 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="62 - A_Rival - Crypt of the Necrodancer OST - Deep Sea Bass %28Coral Riff Remix%29.mp3" />
+    <None Include="Resources\VolumeUpButton.png" />
+    <None Include="Resources\VolumeDownButton.png" />
+    <None Include="Resources\SkipForwardButton.png" />
+    <None Include="Resources\SkipBackButton.png" />
+    <None Include="Resources\PlayButton.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
