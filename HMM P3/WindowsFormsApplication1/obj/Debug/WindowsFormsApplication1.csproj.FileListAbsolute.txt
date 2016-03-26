@@ -3,3 +3,7 @@ C:\Users\USER\Source\Repos\mark-is-a-hakr\HMM P3\WindowsFormsApplication1\bin\De
 C:\Users\USER\Source\Repos\mark-is-a-hakr\HMM P3\WindowsFormsApplication1\obj\Debug\Interop.WMPLib.dll
 C:\Users\USER\Source\Repos\mark-is-a-hakr\HMM P3\WindowsFormsApplication1\obj\Debug\AxInterop.WMPLib.dll
 C:\Users\USER\Source\Repos\mark-is-a-hakr\HMM P3\WindowsFormsApplication1\obj\Debug\WindowsFormsApplication1.csproj.ResolveComReference.cache
+C:\Users\Matthew\Source\Repos\mark-is-a-hakr\HMM P3\WindowsFormsApplication1\bin\Debug\WindowsFormsApplication1.exe.config
+C:\Users\Matthew\Source\Repos\mark-is-a-hakr\HMM P3\WindowsFormsApplication1\obj\Debug\Interop.WMPLib.dll
+C:\Users\Matthew\Source\Repos\mark-is-a-hakr\HMM P3\WindowsFormsApplication1\obj\Debug\AxInterop.WMPLib.dll
+C:\Users\Matthew\Source\Repos\mark-is-a-hakr\HMM P3\WindowsFormsApplication1\obj\Debug\WindowsFormsApplication1.csproj.ResolveComReference.cache
