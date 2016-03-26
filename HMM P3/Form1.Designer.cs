@@ -28,26 +28,91 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.button1 = new System.Windows.Forms.Button();
+            this.play = new System.Windows.Forms.Button();
+            this.pause = new System.Windows.Forms.Button();
+            this.skipforward = new System.Windows.Forms.Button();
+            this.forward = new System.Windows.Forms.Button();
+            this.rewind = new System.Windows.Forms.Button();
+            this.skipback = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
-            // button1
+            // play
             // 
-            this.button1.Location = new System.Drawing.Point(445, 685);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(282, 45);
-            this.button1.TabIndex = 0;
-            this.button1.Text = "Play";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
+            this.play.Location = new System.Drawing.Point(174, 406);
+            this.play.Margin = new System.Windows.Forms.Padding(2);
+            this.play.Name = "play";
+            this.play.Size = new System.Drawing.Size(159, 29);
+            this.play.TabIndex = 1;
+            this.play.Text = "Play";
+            this.play.UseVisualStyleBackColor = true;
+            this.play.Click += new System.EventHandler(this.play_Click);
+            // 
+            // pause
+            // 
+            this.pause.Location = new System.Drawing.Point(337, 406);
+            this.pause.Margin = new System.Windows.Forms.Padding(2);
+            this.pause.Name = "pause";
+            this.pause.Size = new System.Drawing.Size(159, 29);
+            this.pause.TabIndex = 2;
+            this.pause.Text = "Pause";
+            this.pause.UseVisualStyleBackColor = true;
+            this.pause.Click += new System.EventHandler(this.pause_Click);
+            // 
+            // skipforward
+            // 
+            this.skipforward.Location = new System.Drawing.Point(500, 439);
+            this.skipforward.Margin = new System.Windows.Forms.Padding(2);
+            this.skipforward.Name = "skipforward";
+            this.skipforward.Size = new System.Drawing.Size(159, 29);
+            this.skipforward.TabIndex = 3;
+            this.skipforward.Text = "Skip Forward";
+            this.skipforward.UseVisualStyleBackColor = true;
+            this.skipforward.Click += new System.EventHandler(this.skipforward_Click);
+            // 
+            // forward
+            // 
+            this.forward.Location = new System.Drawing.Point(337, 439);
+            this.forward.Margin = new System.Windows.Forms.Padding(2);
+            this.forward.Name = "forward";
+            this.forward.Size = new System.Drawing.Size(159, 29);
+            this.forward.TabIndex = 4;
+            this.forward.Text = "Forward";
+            this.forward.UseVisualStyleBackColor = true;
+            this.forward.Click += new System.EventHandler(this.forward_Click);
+            // 
+            // rewind
+            // 
+            this.rewind.Location = new System.Drawing.Point(174, 439);
+            this.rewind.Margin = new System.Windows.Forms.Padding(2);
+            this.rewind.Name = "rewind";
+            this.rewind.Size = new System.Drawing.Size(159, 29);
+            this.rewind.TabIndex = 5;
+            this.rewind.Text = "Rewind";
+            this.rewind.UseVisualStyleBackColor = true;
+            this.rewind.Click += new System.EventHandler(this.rewind_Click);
+            // 
+            // skipback
+            // 
+            this.skipback.Location = new System.Drawing.Point(11, 439);
+            this.skipback.Margin = new System.Windows.Forms.Padding(2);
+            this.skipback.Name = "skipback";
+            this.skipback.Size = new System.Drawing.Size(159, 29);
+            this.skipback.TabIndex = 6;
+            this.skipback.Text = "Skip Back";
+            this.skipback.UseVisualStyleBackColor = true;
+            this.skipback.Click += new System.EventHandler(this.skipback_Click);
             // 
             // Form1
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(16F, 31F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1241, 742);
-            this.Controls.Add(this.button1);
-            this.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.ClientSize = new System.Drawing.Size(698, 479);
+            this.Controls.Add(this.skipback);
+            this.Controls.Add(this.rewind);
+            this.Controls.Add(this.forward);
+            this.Controls.Add(this.skipforward);
+            this.Controls.Add(this.pause);
+            this.Controls.Add(this.play);
             this.Name = "Form1";
             this.Text = "HMM P3";
             this.Load += new System.EventHandler(this.Form1_Load);
@@ -57,7 +122,12 @@
 
         #endregion
 
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button play;
+        private System.Windows.Forms.Button pause;
+        private System.Windows.Forms.Button skipforward;
+        private System.Windows.Forms.Button forward;
+        private System.Windows.Forms.Button rewind;
+        private System.Windows.Forms.Button skipback;
     }
 }
 
