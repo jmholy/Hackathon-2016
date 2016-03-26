@@ -40,6 +40,7 @@
             // 
             // play
             // 
+            this.play.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
             this.play.AutoSize = true;
             this.play.Image = ((System.Drawing.Image)(resources.GetObject("play.Image")));
             this.play.Location = new System.Drawing.Point(148, 500);
@@ -52,6 +53,7 @@
             // 
             // pause
             // 
+            this.pause.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
             this.pause.AutoSize = true;
             this.pause.Image = ((System.Drawing.Image)(resources.GetObject("pause.Image")));
             this.pause.Location = new System.Drawing.Point(286, 500);
@@ -64,6 +66,7 @@
             // 
             // skipforward
             // 
+            this.skipforward.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
             this.skipforward.AutoSize = true;
             this.skipforward.Image = ((System.Drawing.Image)(resources.GetObject("skipforward.Image")));
             this.skipforward.Location = new System.Drawing.Point(424, 500);
@@ -76,6 +79,7 @@
             // 
             // skipback
             // 
+            this.skipback.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
             this.skipback.AutoSize = true;
             this.skipback.Image = ((System.Drawing.Image)(resources.GetObject("skipback.Image")));
             this.skipback.Location = new System.Drawing.Point(10, 500);
@@ -88,6 +92,7 @@
             // 
             // volumedown
             // 
+            this.volumedown.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
             this.volumedown.AutoSize = true;
             this.volumedown.Image = ((System.Drawing.Image)(resources.GetObject("volumedown.Image")));
             this.volumedown.Location = new System.Drawing.Point(562, 500);
@@ -100,6 +105,7 @@
             // 
             // volumeup
             // 
+            this.volumeup.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
             this.volumeup.AutoSize = true;
             this.volumeup.Image = ((System.Drawing.Image)(resources.GetObject("volumeup.Image")));
             this.volumeup.Location = new System.Drawing.Point(700, 500);
