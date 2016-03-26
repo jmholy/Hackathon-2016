@@ -36,7 +36,12 @@ namespace HMM_P3
 
         private void button1_Click(object sender, EventArgs e)
         {
+            
+        }
 
+        private void WMPTest()
+        {
+            //Windows
         }
     }
 }
