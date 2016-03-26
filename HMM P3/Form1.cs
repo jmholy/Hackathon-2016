@@ -9,6 +9,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using WMPLib;
 
+
 namespace HMM_P3
 {
     public partial class Form1 : Form
@@ -88,6 +89,7 @@ namespace HMM_P3
 
         private void progressBar_Click(object sender, EventArgs e)
         {
+            progressBar.Increment(5);
             
         }
     }
