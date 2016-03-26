@@ -105,6 +105,7 @@
     <None Include="Resources\SkipForwardButton.png" />
     <None Include="Resources\SkipBackButton.png" />
     <None Include="Resources\PlayButton.png" />
+    <None Include="Resources\PauseButton.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

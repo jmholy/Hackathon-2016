@@ -30,11 +30,17 @@ namespace HMM_P3
             WindowsMediaPlayer wmp = new WindowsMediaPlayer();
             wmp.URL = filename;
             wmp.controls.play();
+            play.BackgroundImage = ((System.Drawing.Image)(Properties.Resources.PlayButton));
+            pause.BackgroundImage = ((System.Drawing.Image)(Properties.Resources.PauseButton));
+            skipforward.BackgroundImage = ((System.Drawing.Image)(Properties.Resources.SkipForwardButton));
+            skipback.BackgroundImage = ((System.Drawing.Image)(Properties.Resources.SkipBackButton));
+            volumeup.BackgroundImage = ((System.Drawing.Image)(Properties.Resources.VolumeUpButton));
+            volumedown.BackgroundImage = ((System.Drawing.Image)(Properties.Resources.VolumeDownButton));
         }
 
         private void play_Click(object sender, EventArgs e)
         {
-            play.BackgroundImage = ((System.Drawing.Image)(Properties.Resources.PlayButton));
+            
         }
 
         private void pause_Click(object sender, EventArgs e)

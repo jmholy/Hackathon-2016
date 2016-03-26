@@ -38,67 +38,61 @@
             // 
             // play
             // 
-            this.play.Location = new System.Drawing.Point(174, 406);
+            this.play.Location = new System.Drawing.Point(143, 504);
             this.play.Margin = new System.Windows.Forms.Padding(2);
             this.play.Name = "play";
-            this.play.Size = new System.Drawing.Size(159, 29);
+            this.play.Size = new System.Drawing.Size(128, 128);
             this.play.TabIndex = 1;
-            this.play.Text = "Play";
             this.play.UseVisualStyleBackColor = true;
             this.play.Click += new System.EventHandler(this.play_Click);
             // 
             // pause
             // 
-            this.pause.Location = new System.Drawing.Point(337, 406);
+            this.pause.Location = new System.Drawing.Point(275, 504);
             this.pause.Margin = new System.Windows.Forms.Padding(2);
             this.pause.Name = "pause";
-            this.pause.Size = new System.Drawing.Size(159, 29);
+            this.pause.Size = new System.Drawing.Size(128, 128);
             this.pause.TabIndex = 2;
-            this.pause.Text = "Pause";
             this.pause.UseVisualStyleBackColor = true;
             this.pause.Click += new System.EventHandler(this.pause_Click);
             // 
             // skipforward
             // 
-            this.skipforward.Location = new System.Drawing.Point(174, 439);
+            this.skipforward.Location = new System.Drawing.Point(407, 504);
             this.skipforward.Margin = new System.Windows.Forms.Padding(2);
             this.skipforward.Name = "skipforward";
-            this.skipforward.Size = new System.Drawing.Size(159, 29);
+            this.skipforward.Size = new System.Drawing.Size(128, 128);
             this.skipforward.TabIndex = 3;
-            this.skipforward.Text = "Skip Forward";
             this.skipforward.UseVisualStyleBackColor = true;
             this.skipforward.Click += new System.EventHandler(this.skipforward_Click);
             // 
             // skipback
             // 
-            this.skipback.Location = new System.Drawing.Point(11, 439);
+            this.skipback.Location = new System.Drawing.Point(11, 504);
             this.skipback.Margin = new System.Windows.Forms.Padding(2);
             this.skipback.Name = "skipback";
-            this.skipback.Size = new System.Drawing.Size(159, 29);
+            this.skipback.Size = new System.Drawing.Size(128, 128);
             this.skipback.TabIndex = 6;
-            this.skipback.Text = "Skip Back";
             this.skipback.UseVisualStyleBackColor = true;
             this.skipback.Click += new System.EventHandler(this.skipback_Click);
             // 
             // volumedown
             // 
-            this.volumedown.Location = new System.Drawing.Point(337, 439);
+            this.volumedown.Location = new System.Drawing.Point(539, 504);
             this.volumedown.Margin = new System.Windows.Forms.Padding(2);
             this.volumedown.Name = "volumedown";
-            this.volumedown.Size = new System.Drawing.Size(159, 29);
+            this.volumedown.Size = new System.Drawing.Size(128, 128);
             this.volumedown.TabIndex = 8;
-            this.volumedown.Text = "Volume Down";
             this.volumedown.UseVisualStyleBackColor = true;
             this.volumedown.Click += new System.EventHandler(this.volumedown_Click);
             // 
             // volumeup
             // 
-            this.volumeup.Location = new System.Drawing.Point(500, 439);
+            this.volumeup.Location = new System.Drawing.Point(671, 504);
             this.volumeup.Margin = new System.Windows.Forms.Padding(2);
             this.volumeup.Name = "volumeup";
-            this.volumeup.Size = new System.Drawing.Size(159, 29);
+            this.volumeup.Size = new System.Drawing.Size(128, 128);
             this.volumeup.TabIndex = 9;
-            this.volumeup.Text = "Volume Up";
             this.volumeup.UseVisualStyleBackColor = true;
             this.volumeup.Click += new System.EventHandler(this.volumeup_Click);
             // 
@@ -106,7 +100,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(679, 479);
+            this.ClientSize = new System.Drawing.Size(814, 643);
             this.Controls.Add(this.volumeup);
             this.Controls.Add(this.volumedown);
             this.Controls.Add(this.skipback);
