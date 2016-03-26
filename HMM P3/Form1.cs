@@ -32,16 +32,6 @@ namespace HMM_P3
 
         }
 
-        private void rewind_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void forward_Click(object sender, EventArgs e)
-        {
-
-        }
-
         private void skipback_Click(object sender, EventArgs e)
         {
 
@@ -55,6 +45,16 @@ namespace HMM_P3
         private void WMPTest()
         {
             //Windows
+        }
+
+        private void volumedown_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void volumeup_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }
