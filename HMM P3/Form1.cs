@@ -28,5 +28,15 @@ namespace HMM_P3
                 this.Controls.Add(play);
             }
         }
+
+        private void Form1_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
