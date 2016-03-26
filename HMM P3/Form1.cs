@@ -15,18 +15,6 @@ namespace HMM_P3
         public Form1()
         {
             InitializeComponent();
-            for (int i = 0; i < 5; i++)
-            {
-                Button play = new Button();
-                Button pause = new Button();
-                Button forward = new Button();
-                Button reverse = new Button();
-                Button skipback = new Button();
-                Button skipforward = new Button();
-
-                play.Location = new Point(20, 30*i+10);
-                this.Controls.Add(play);
-            }
         }
 
         private void Form1_Load(object sender, EventArgs e)
@@ -34,7 +22,32 @@ namespace HMM_P3
 
         }
 
-        private void button1_Click(object sender, EventArgs e)
+        private void play_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void pause_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void rewind_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void forward_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void skipback_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void skipforward_Click(object sender, EventArgs e)
         {
             
         }
