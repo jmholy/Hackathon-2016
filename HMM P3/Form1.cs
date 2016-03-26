@@ -14,6 +14,9 @@ namespace HMM_P3
 {
     public partial class Form1 : Form
     {
+        WindowsMediaPlayer wmp;
+        PlaylistContainer m_playlist;
+
         public Form1()
         {
             InitializeComponent();
@@ -28,7 +31,7 @@ namespace HMM_P3
             fileopener.ShowDialog();
 
             filename = fileopener.FileName;
-            WindowsMediaPlayer wmp = new WindowsMediaPlayer();
+            wmp = new WindowsMediaPlayer();
             wmp.URL = filename;
             wmp.controls.play();
             /*play.BackgroundImage = ((System.Drawing.Image)(Properties.Resources.PlayButton));
@@ -61,12 +64,28 @@ namespace HMM_P3
 
         private void skipback_Click(object sender, EventArgs e)
         {
+            /*
+            if(songprogressBar < 5)//<-------------- This is totally not the correct name
+            {
+                wmp.controls.stop();
+                wmp.controls.play();
+            }
+            else
+            {
+                wmp.URL = m_playlist.prevSong;
+                wmp.controls.play();
+                songtitleTextBox.value = m_playlist.getSongName();// This is totally not the correct name
+            }
+            */
 
         }
 
         private void skipforward_Click(object sender, EventArgs e)
         {
-            
+            wmp.URL = m_playlist.nextSong();
+            wmp.controls.play();
+            //SongtitleTextBox.Value = m_playlist.getSongName();// This is totally not the correct name
+
         }
 
         private void volumedown_Click(object sender, EventArgs e)
