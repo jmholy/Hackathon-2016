@@ -31,9 +31,9 @@
             this.play = new System.Windows.Forms.Button();
             this.pause = new System.Windows.Forms.Button();
             this.skipforward = new System.Windows.Forms.Button();
-            this.forward = new System.Windows.Forms.Button();
-            this.rewind = new System.Windows.Forms.Button();
             this.skipback = new System.Windows.Forms.Button();
+            this.volumedown = new System.Windows.Forms.Button();
+            this.volumeup = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // play
@@ -60,7 +60,7 @@
             // 
             // skipforward
             // 
-            this.skipforward.Location = new System.Drawing.Point(500, 439);
+            this.skipforward.Location = new System.Drawing.Point(174, 439);
             this.skipforward.Margin = new System.Windows.Forms.Padding(2);
             this.skipforward.Name = "skipforward";
             this.skipforward.Size = new System.Drawing.Size(159, 29);
@@ -68,28 +68,6 @@
             this.skipforward.Text = "Skip Forward";
             this.skipforward.UseVisualStyleBackColor = true;
             this.skipforward.Click += new System.EventHandler(this.skipforward_Click);
-            // 
-            // forward
-            // 
-            this.forward.Location = new System.Drawing.Point(337, 439);
-            this.forward.Margin = new System.Windows.Forms.Padding(2);
-            this.forward.Name = "forward";
-            this.forward.Size = new System.Drawing.Size(159, 29);
-            this.forward.TabIndex = 4;
-            this.forward.Text = "Forward";
-            this.forward.UseVisualStyleBackColor = true;
-            this.forward.Click += new System.EventHandler(this.forward_Click);
-            // 
-            // rewind
-            // 
-            this.rewind.Location = new System.Drawing.Point(174, 439);
-            this.rewind.Margin = new System.Windows.Forms.Padding(2);
-            this.rewind.Name = "rewind";
-            this.rewind.Size = new System.Drawing.Size(159, 29);
-            this.rewind.TabIndex = 5;
-            this.rewind.Text = "Rewind";
-            this.rewind.UseVisualStyleBackColor = true;
-            this.rewind.Click += new System.EventHandler(this.rewind_Click);
             // 
             // skipback
             // 
@@ -102,14 +80,36 @@
             this.skipback.UseVisualStyleBackColor = true;
             this.skipback.Click += new System.EventHandler(this.skipback_Click);
             // 
+            // volumedown
+            // 
+            this.volumedown.Location = new System.Drawing.Point(337, 439);
+            this.volumedown.Margin = new System.Windows.Forms.Padding(2);
+            this.volumedown.Name = "volumedown";
+            this.volumedown.Size = new System.Drawing.Size(159, 29);
+            this.volumedown.TabIndex = 8;
+            this.volumedown.Text = "Volume Down";
+            this.volumedown.UseVisualStyleBackColor = true;
+            this.volumedown.Click += new System.EventHandler(this.volumedown_Click);
+            // 
+            // volumeup
+            // 
+            this.volumeup.Location = new System.Drawing.Point(500, 439);
+            this.volumeup.Margin = new System.Windows.Forms.Padding(2);
+            this.volumeup.Name = "volumeup";
+            this.volumeup.Size = new System.Drawing.Size(159, 29);
+            this.volumeup.TabIndex = 9;
+            this.volumeup.Text = "Volume Up";
+            this.volumeup.UseVisualStyleBackColor = true;
+            this.volumeup.Click += new System.EventHandler(this.volumeup_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(698, 479);
+            this.ClientSize = new System.Drawing.Size(679, 479);
+            this.Controls.Add(this.volumeup);
+            this.Controls.Add(this.volumedown);
             this.Controls.Add(this.skipback);
-            this.Controls.Add(this.rewind);
-            this.Controls.Add(this.forward);
             this.Controls.Add(this.skipforward);
             this.Controls.Add(this.pause);
             this.Controls.Add(this.play);
@@ -125,9 +125,9 @@
         private System.Windows.Forms.Button play;
         private System.Windows.Forms.Button pause;
         private System.Windows.Forms.Button skipforward;
-        private System.Windows.Forms.Button forward;
-        private System.Windows.Forms.Button rewind;
         private System.Windows.Forms.Button skipback;
+        private System.Windows.Forms.Button volumedown;
+        private System.Windows.Forms.Button volumeup;
     }
 }
 
