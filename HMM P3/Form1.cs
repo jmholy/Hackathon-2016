@@ -62,6 +62,16 @@ namespace HMM_P3
             
         }
 
+        private void volumedown_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void volumeup_Click(object sender, EventArgs e)
+        {
+
+        }
+
         private void WMPTest()
         {
             //Windows
