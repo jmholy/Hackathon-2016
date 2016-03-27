@@ -81,8 +81,18 @@ namespace HMM_P3
             }
             else
             {
+                string temp = m_playlist.getFileName();
                 wmp.URL = m_playlist.prevSong;
-                wmp.controls.play();
+
+                if (wmp.URL != null)
+                {
+                    wmp.controls.play();
+                }
+                else
+                {
+                    wmp.URL = temp;
+                    wmp.controls.stop();
+                }
                 songtitleTextBox.value = m_playlist.getSongName();// This is totally not the correct name
             }
             */
@@ -91,8 +101,18 @@ namespace HMM_P3
 
         private void skipforward_Click(object sender, EventArgs e)
         {
+            string temp = wmp.URL;
+
             wmp.URL = m_playlist.nextSong();
-            wmp.controls.play();
+            if (wmp.URL != null)
+            {
+                wmp.controls.play();
+            }
+            else
+            {
+                wmp.URL = temp;
+                wmp.controls.stop();
+            }
             //SongtitleTextBox.Value = m_playlist.getSongName();// This is totally not the correct name
 
         }
@@ -118,7 +138,6 @@ namespace HMM_P3
         private void progressBar_Click(object sender, EventArgs e)
         {
             progressBar.Increment(5);
-            
         }
     }
 }
