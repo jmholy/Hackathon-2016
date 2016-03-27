@@ -33,7 +33,7 @@
             this.progressBar = new System.Windows.Forms.ProgressBar();
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.toolStripMenuItem3 = new System.Windows.Forms.ToolStripMenuItem();
-            this.toolStripMenuItem4 = new System.Windows.Forms.ToolStripMenuItem();
+            this.addSongsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.basicTheme = new System.Windows.Forms.ToolStripMenuItem();
             this.hypnoToad = new System.Windows.Forms.ToolStripMenuItem();
@@ -79,16 +79,17 @@
             // toolStripMenuItem3
             // 
             this.toolStripMenuItem3.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.toolStripMenuItem4});
+            this.addSongsToolStripMenuItem});
             this.toolStripMenuItem3.Name = "toolStripMenuItem3";
             this.toolStripMenuItem3.Size = new System.Drawing.Size(74, 29);
             this.toolStripMenuItem3.Text = "Songs";
             // 
-            // toolStripMenuItem4
+            // addSongsToolStripMenuItem
             // 
-            this.toolStripMenuItem4.Name = "toolStripMenuItem4";
-            this.toolStripMenuItem4.Size = new System.Drawing.Size(186, 30);
-            this.toolStripMenuItem4.Text = "Add Songs";
+            this.addSongsToolStripMenuItem.Name = "addSongsToolStripMenuItem";
+            this.addSongsToolStripMenuItem.Size = new System.Drawing.Size(211, 30);
+            this.addSongsToolStripMenuItem.Text = "Add Songs";
+            this.addSongsToolStripMenuItem.Click += new System.EventHandler(this.addSongsToolStripMenuItem_Click_1);
             // 
             // toolStripMenuItem1
             // 
@@ -290,7 +291,7 @@
         private System.Windows.Forms.ToolStripMenuItem toolStripMenuItem1;
         private System.Windows.Forms.ToolStripMenuItem basicTheme;
         private System.Windows.Forms.ToolStripMenuItem toolStripMenuItem3;
-        private System.Windows.Forms.ToolStripMenuItem toolStripMenuItem4;
+        private System.Windows.Forms.ToolStripMenuItem addSongsToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem hypnoToad;
     }
 }

@@ -36,25 +36,6 @@ namespace HMM_P3
             timeBox2.Text = "0:00";
         }
 
-
-        private void addSongsToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            OpenFileDialog fileopener = new OpenFileDialog();
-            fileopener.Multiselect = true;
-            fileopener.ShowDialog();
-
-            foreach (string filename in fileopener.FileNames)
-            {
-                m_playlist.addSong(filename);
-            }
-
-            if (wmp.URL == "")
-            {
-                wmp.URL = m_playlist.getFileName();
-                wmp.controls.stop();
-            }
-        }
-
         private void media_PlayStateChange(int state)
         {
             
@@ -241,6 +222,24 @@ namespace HMM_P3
         private void hypnoToad_Click(object sender, EventArgs e)
         {
             pictureBox1.Image = Properties.Resources.hypnotoad;
+        }
+
+        private void addSongsToolStripMenuItem_Click_1(object sender, EventArgs e)
+        {
+            OpenFileDialog fileopener = new OpenFileDialog();
+            fileopener.Multiselect = true;
+            fileopener.ShowDialog();
+
+            foreach (string filename in fileopener.FileNames)
+            {
+                m_playlist.addSong(filename);
+            }
+
+            if (wmp.URL == "")
+            {
+                wmp.URL = m_playlist.getFileName();
+                wmp.controls.stop();
+            }
         }
 
       }
