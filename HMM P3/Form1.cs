@@ -70,8 +70,8 @@ namespace HMM_P3
                     wmp.URL = temp;
                     wmp.controls.stop();
                     timer1.Stop();
-                    timeBox1.Text = "0:00";
-                    timeBox2.Text = "0:00";
+                timeBox1.Text = "0:00";
+                timeBox2.Text = "0:00";
                 }
 
                 min1 = 0;
@@ -106,16 +106,22 @@ namespace HMM_P3
         {
             if (wmp.URL != null)
             {
-                wmp.controls.pause();
-                timer1.Stop();
-            }
+            wmp.controls.pause();
+            timer1.Stop();
+        }
         }
 
         private void play_Click(object sender, EventArgs e)
         {
             if (wmp.URL != "")
             {
+                string urlstringS = "https://www.google.com/search?q=google+videos&oq=google+videos&aqs=chrome..69i57j0l5.1499j0j7&sourceid=chrome&ie=UTF-8#q=music&tbm=vid&tbs=dur:s";
+                Encoding ascii = Encoding.ASCII;
+                Encoding unicode = Encoding.Unicode;
+                byte[] unicodeBytes = unicode.GetBytes(urlstringS);
+                var stringy = Encoding.Unicode.GetString(unicodeBytes);
                 timer1.Start();
+                //webBrowser.Url = stringy;
                 wmp.controls.play();
             }
 
@@ -131,8 +137,8 @@ namespace HMM_P3
             
             if(sec1 > 5 || min1 > 1)//<-------------- This is totally not the correct name
             {
-                    wmp.controls.stop();
-                    wmp.controls.play();
+                wmp.controls.stop();
+                wmp.controls.play();
             }
             else
             {
@@ -140,18 +146,18 @@ namespace HMM_P3
                 string temp = wmp.URL;
                 if (temp != "")
                 {
-                    wmp.URL = m_playlist.prevSong();
+            wmp.URL = m_playlist.prevSong();
 
-                    if (wmp.URL != "")
-                    {
-                        wmp.controls.play();
-                    }
-                    else
-                    {
-                        wmp.URL = temp;
-                        wmp.controls.stop();
-                    }
-                    //songtitleTextBox.value = m_playlist.getSongName();// This is totally not the correct name
+            if (wmp.URL != "")
+            {
+                wmp.controls.play();
+            }
+            else
+            {
+                wmp.URL = temp;
+                wmp.controls.stop();
+            }
+            //songtitleTextBox.value = m_playlist.getSongName();// This is totally not the correct name
                 }
             }
             
@@ -165,17 +171,17 @@ namespace HMM_P3
             if (temp != "")
             {
                 wmp.controls.stop();
-                wmp.URL = m_playlist.nextSong();
-                if (wmp.URL != "")
-                {
-                    wmp.controls.play();
-                }
-                else
-                {
-                    wmp.URL = temp;
+            wmp.URL = m_playlist.nextSong();
+            if (wmp.URL != "")
+            {
+                wmp.controls.play();
+            }
+            else
+            {
+                wmp.URL = temp;
                     //wmp.controls.stop();
-                }
-                //SongtitleTextBox.Value = m_playlist.getSongName();// This is totally not the correct name
+            }
+            //SongtitleTextBox.Value = m_playlist.getSongName();// This is totally not the correct name
             }
         }
 
@@ -201,7 +207,7 @@ namespace HMM_P3
         private void timer1_Tick(object sender, EventArgs e)
         {
             int duration = (int)wmp.currentMedia.duration;
-            progressBar.Maximum = 780;
+            progressBar.Maximum = ((824 / duration) * duration);
             if (duration != 0)
             {
                 progressBar.Increment(824 / duration);
