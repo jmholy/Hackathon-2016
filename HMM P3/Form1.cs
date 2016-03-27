@@ -59,8 +59,8 @@ namespace HMM_P3
 
         private void play_Click(object sender, EventArgs e)
         {
-            wmp.controls.play();
             timer1.Start();
+            wmp.controls.play();
         }
 
         private void progressBar_Click(object sender, EventArgs e)
@@ -143,19 +143,20 @@ namespace HMM_P3
                 sec2 = duration % 60;
                 min2 = duration / 60;
             }
-            timeBox1.Text = min1 + ":" + sec1.ToString("D2");
-            sec1++;
             if (sec1 == 60)
             {
                 min1++;
                 sec1 = 0;
             }
-            timeBox2.Text = min2 + ":" + sec2.ToString("D2");
+            timeBox1.Text = min1 + ":" + sec1.ToString("D2");
+            sec1++;
             if (sec2 == 0)
             {
                 min2--;
-                sec2 = 60;
+                sec2 = 59;
             }
+            timeBox2.Text = "-" + min2 + ":" + sec2.ToString("D2");
+            sec2--;
             if (timeBox2.Text == "0:00" && timeBox1.Text == Convert.ToString(duration))
             {
                 timer1.Stop();

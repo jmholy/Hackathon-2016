@@ -131,9 +131,9 @@
             this.progressBar.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.progressBar.ForeColor = System.Drawing.SystemColors.InfoText;
-            this.progressBar.Location = new System.Drawing.Point(0, 468);
+            this.progressBar.Location = new System.Drawing.Point(10, 468);
             this.progressBar.Name = "progressBar";
-            this.progressBar.Size = new System.Drawing.Size(846, 25);
+            this.progressBar.Size = new System.Drawing.Size(824, 25);
             this.progressBar.TabIndex = 10;
             this.progressBar.Click += new System.EventHandler(this.progressBar_Click);
             // 
@@ -176,20 +176,26 @@
             // timeBox1
             // 
             this.timeBox1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.timeBox1.Location = new System.Drawing.Point(0, 428);
+            this.timeBox1.BackColor = System.Drawing.SystemColors.ButtonFace;
+            this.timeBox1.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.timeBox1.Location = new System.Drawing.Point(12, 445);
             this.timeBox1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.timeBox1.Name = "timeBox1";
-            this.timeBox1.Size = new System.Drawing.Size(148, 26);
+            this.timeBox1.Size = new System.Drawing.Size(148, 19);
             this.timeBox1.TabIndex = 11;
             // 
             // timeBox2
             // 
             this.timeBox2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.timeBox2.Location = new System.Drawing.Point(696, 428);
+            this.timeBox2.BackColor = System.Drawing.SystemColors.ButtonFace;
+            this.timeBox2.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.timeBox2.Location = new System.Drawing.Point(684, 445);
             this.timeBox2.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.timeBox2.Name = "timeBox2";
-            this.timeBox2.Size = new System.Drawing.Size(148, 26);
+            this.timeBox2.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.timeBox2.Size = new System.Drawing.Size(148, 19);
             this.timeBox2.TabIndex = 12;
+            this.timeBox2.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
             // timer1
             // 
