@@ -63,6 +63,16 @@ namespace HMM_P3.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap boring {
+            get {
+                object obj = ResourceManager.GetObject("boring", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap coug {
             get {
                 object obj = ResourceManager.GetObject("coug", resourceCulture);

@@ -20,6 +20,7 @@ namespace HMM_P3
         PlaylistContainer m_playlist;
         int sec1 = 0, sec2 = 0;
         int min1 = 0, min2 = 0;
+        int refresh = 0;
         string[] songList = new String[100];
         int songcount = 0;
         private const int APPCOMMAND_VOLUME_UP = 0xA0000;
@@ -43,6 +44,7 @@ namespace HMM_P3
             timer1.Interval = 1000;
             timeBox1.Text = "0:00";
             timeBox2.Text = "0:00";
+            
         }
 
         private void media_PlayStateChange(int state)
@@ -184,6 +186,13 @@ namespace HMM_P3
         private void timer1_Tick(object sender, EventArgs e)
         {
             int duration = (int)wmp.currentMedia.duration;
+            if (refresh == 10)
+            {
+                webBrowser1.Refresh();
+                webBrowser2.Refresh();
+                refresh = 0;
+            }
+            refresh++;
             progressBar.Maximum = ((824 / duration) * duration);
             if (duration != 0)
             {
@@ -218,11 +227,17 @@ namespace HMM_P3
         private void basicTheme_Click(object sender, EventArgs e)
         {
             pictureBox1.Image = Properties.Resources.cougtiled3;
+            songBox.BackColor = System.Drawing.Color.FromArgb(232, 46, 46);
+            progressBar.ForeColor = System.Drawing.Color.FromArgb(232, 46, 46);
+
         }
 
         private void hypnoToad_Click(object sender, EventArgs e)
         {
             pictureBox1.Image = Properties.Resources.hypnotoad;
+            songBox.BackColor = System.Drawing.Color.FromArgb(61, 255, 13);
+            progressBar.ForeColor = System.Drawing.Color.FromArgb(61, 255, 13);
+
         }
 
         private void addSongsToolStripMenuItem_Click_1(object sender, EventArgs e)
@@ -236,16 +251,18 @@ namespace HMM_P3
                 m_playlist.addSong(filename);
                 string songName;
                 string songListstring = "\0";
+                int j = 1;
                 string[] temp = filename.Split('\\');
                 songName = temp[temp.Length - 1];
                 temp = songName.Split('.');
                 songName = temp[0];
                 songList[songcount] = songName;
                 songcount++;
-                songListstring = songList[0] + System.Environment.NewLine;
+                songListstring = "1 - " + songList[0] + System.Environment.NewLine;
                 for (int k = 0; k < songcount - 1; k++)
                 {
-                    songListstring = songListstring + songList[songcount - 1 - k] + System.Environment.NewLine;
+                    j++;
+                    songListstring = songListstring + j + " - " + songList[songcount - 1 - k] + System.Environment.NewLine;
                 }
                 songBox.Text = songListstring;
             }
@@ -255,6 +272,14 @@ namespace HMM_P3
                 wmp.URL = m_playlist.getFileName();
                 wmp.controls.stop();
             }
+
+        }
+
+        private void defaultToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            pictureBox1.Image = Properties.Resources.boring;
+            songBox.BackColor = SystemColors.Control;
+            progressBar.ForeColor = SystemColors.HotTrack;
         }
 
       }

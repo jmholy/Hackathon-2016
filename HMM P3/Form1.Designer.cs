@@ -42,16 +42,27 @@
             this.timeBox1 = new System.Windows.Forms.TextBox();
             this.timeBox2 = new System.Windows.Forms.TextBox();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
+            this.songInfoBox = new System.Windows.Forms.TextBox();
+            this.songBox = new System.Windows.Forms.TextBox();
+            this.tabControl1 = new System.Windows.Forms.TabControl();
+            this.tabPage1 = new System.Windows.Forms.TabPage();
+            this.tabPage2 = new System.Windows.Forms.TabPage();
+            this.webBrowser1 = new System.Windows.Forms.WebBrowser();
+            this.tabPage3 = new System.Windows.Forms.TabPage();
+            this.webBrowser2 = new System.Windows.Forms.WebBrowser();
+            this.defaultToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.volumeup = new System.Windows.Forms.Button();
             this.volumedown = new System.Windows.Forms.Button();
             this.skipback = new System.Windows.Forms.Button();
             this.skipforward = new System.Windows.Forms.Button();
             this.pause = new System.Windows.Forms.Button();
             this.play = new System.Windows.Forms.Button();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.songInfoBox = new System.Windows.Forms.TextBox();
-            this.songBox = new System.Windows.Forms.TextBox();
             this.menuStrip1.SuspendLayout();
+            this.tabControl1.SuspendLayout();
+            this.tabPage1.SuspendLayout();
+            this.tabPage2.SuspendLayout();
+            this.tabPage3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -59,7 +70,7 @@
             // 
             this.progressBar.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.progressBar.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.progressBar.ForeColor = System.Drawing.SystemColors.HotTrack;
             this.progressBar.Location = new System.Drawing.Point(10, 468);
             this.progressBar.Name = "progressBar";
             this.progressBar.Size = new System.Drawing.Size(824, 25);
@@ -96,6 +107,7 @@
             // toolStripMenuItem1
             // 
             this.toolStripMenuItem1.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.defaultToolStripMenuItem,
             this.basicTheme,
             this.hypnoToad});
             this.toolStripMenuItem1.Name = "toolStripMenuItem1";
@@ -153,6 +165,121 @@
             // timer1
             // 
             this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
+            // 
+            // songInfoBox
+            // 
+            this.songInfoBox.BackColor = System.Drawing.SystemColors.ButtonFace;
+            this.songInfoBox.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.songInfoBox.Location = new System.Drawing.Point(167, 436);
+            this.songInfoBox.Name = "songInfoBox";
+            this.songInfoBox.Size = new System.Drawing.Size(510, 19);
+            this.songInfoBox.TabIndex = 15;
+            this.songInfoBox.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // songBox
+            // 
+            this.songBox.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.songBox.Font = new System.Drawing.Font("Lucida Console", 10F);
+            this.songBox.Location = new System.Drawing.Point(14, 38);
+            this.songBox.Multiline = true;
+            this.songBox.Name = "songBox";
+            this.songBox.ReadOnly = true;
+            this.songBox.Size = new System.Drawing.Size(310, 385);
+            this.songBox.TabIndex = 16;
+            // 
+            // tabControl1
+            // 
+            this.tabControl1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.tabControl1.Controls.Add(this.tabPage1);
+            this.tabControl1.Controls.Add(this.tabPage2);
+            this.tabControl1.Controls.Add(this.tabPage3);
+            this.tabControl1.Location = new System.Drawing.Point(330, 12);
+            this.tabControl1.Name = "tabControl1";
+            this.tabControl1.SelectedIndex = 0;
+            this.tabControl1.Size = new System.Drawing.Size(506, 411);
+            this.tabControl1.TabIndex = 17;
+            // 
+            // tabPage1
+            // 
+            this.tabPage1.Controls.Add(this.pictureBox1);
+            this.tabPage1.Location = new System.Drawing.Point(4, 29);
+            this.tabPage1.Name = "tabPage1";
+            this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPage1.Size = new System.Drawing.Size(498, 378);
+            this.tabPage1.TabIndex = 0;
+            this.tabPage1.Text = "Image";
+            this.tabPage1.UseVisualStyleBackColor = true;
+            // 
+            // tabPage2
+            // 
+            this.tabPage2.Controls.Add(this.webBrowser1);
+            this.tabPage2.Location = new System.Drawing.Point(4, 29);
+            this.tabPage2.Name = "tabPage2";
+            this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPage2.Size = new System.Drawing.Size(498, 378);
+            this.tabPage2.TabIndex = 1;
+            this.tabPage2.Text = "Random Gifs";
+            this.tabPage2.UseVisualStyleBackColor = true;
+            // 
+            // webBrowser1
+            // 
+            this.webBrowser1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.webBrowser1.Location = new System.Drawing.Point(3, -3);
+            this.webBrowser1.MinimumSize = new System.Drawing.Size(20, 20);
+            this.webBrowser1.Name = "webBrowser1";
+            this.webBrowser1.ScriptErrorsSuppressed = true;
+            this.webBrowser1.ScrollBarsEnabled = false;
+            this.webBrowser1.Size = new System.Drawing.Size(495, 381);
+            this.webBrowser1.TabIndex = 0;
+            this.webBrowser1.Url = new System.Uri("http://www.gifff.in/", System.UriKind.Absolute);
+            // 
+            // tabPage3
+            // 
+            this.tabPage3.Controls.Add(this.webBrowser2);
+            this.tabPage3.Location = new System.Drawing.Point(4, 29);
+            this.tabPage3.Name = "tabPage3";
+            this.tabPage3.Size = new System.Drawing.Size(498, 378);
+            this.tabPage3.TabIndex = 2;
+            this.tabPage3.Text = "Random Video";
+            this.tabPage3.UseVisualStyleBackColor = true;
+            // 
+            // webBrowser2
+            // 
+            this.webBrowser2.AllowNavigation = false;
+            this.webBrowser2.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.webBrowser2.Location = new System.Drawing.Point(0, 0);
+            this.webBrowser2.MinimumSize = new System.Drawing.Size(20, 20);
+            this.webBrowser2.Name = "webBrowser2";
+            this.webBrowser2.ScrollBarsEnabled = false;
+            this.webBrowser2.Size = new System.Drawing.Size(498, 378);
+            this.webBrowser2.TabIndex = 0;
+            this.webBrowser2.Url = new System.Uri("https://www.youtube.com/watch?v=dQw4w9WgXcQ?version3", System.UriKind.Absolute);
+            // 
+            // defaultToolStripMenuItem
+            // 
+            this.defaultToolStripMenuItem.Name = "defaultToolStripMenuItem";
+            this.defaultToolStripMenuItem.Size = new System.Drawing.Size(194, 30);
+            this.defaultToolStripMenuItem.Text = "Default";
+            this.defaultToolStripMenuItem.Click += new System.EventHandler(this.defaultToolStripMenuItem_Click);
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.pictureBox1.Image = global::HMM_P3.Properties.Resources.boring;
+            this.pictureBox1.Location = new System.Drawing.Point(0, 3);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(500, 375);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox1.TabIndex = 0;
+            this.pictureBox1.TabStop = false;
             // 
             // volumeup
             // 
@@ -232,48 +359,14 @@
             this.play.UseVisualStyleBackColor = true;
             this.play.Click += new System.EventHandler(this.play_Click);
             // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.pictureBox1.Image = global::HMM_P3.Properties.Resources.cougtiled3;
-            this.pictureBox1.Location = new System.Drawing.Point(443, 38);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(405, 385);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox1.TabIndex = 14;
-            this.pictureBox1.TabStop = false;
-            // 
-            // songInfoBox
-            // 
-            this.songInfoBox.BackColor = System.Drawing.SystemColors.ButtonFace;
-            this.songInfoBox.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.songInfoBox.Location = new System.Drawing.Point(167, 436);
-            this.songInfoBox.Name = "songInfoBox";
-            this.songInfoBox.Size = new System.Drawing.Size(510, 19);
-            this.songInfoBox.TabIndex = 15;
-            this.songInfoBox.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            // 
-            // songBox
-            // 
-            this.songBox.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.songBox.Location = new System.Drawing.Point(14, 38);
-            this.songBox.Multiline = true;
-            this.songBox.Name = "songBox";
-            this.songBox.ReadOnly = true;
-            this.songBox.Size = new System.Drawing.Size(405, 385);
-            this.songBox.TabIndex = 16;
-            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(848, 649);
-            this.Controls.Add(this.songBox);
             this.Controls.Add(this.songInfoBox);
+            this.Controls.Add(this.tabControl1);
+            this.Controls.Add(this.songBox);
             this.Controls.Add(this.timeBox2);
             this.Controls.Add(this.timeBox1);
             this.Controls.Add(this.progressBar);
@@ -284,7 +377,6 @@
             this.Controls.Add(this.pause);
             this.Controls.Add(this.play);
             this.Controls.Add(this.menuStrip1);
-            this.Controls.Add(this.pictureBox1);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MainMenuStrip = this.menuStrip1;
             this.Name = "Form1";
@@ -292,6 +384,10 @@
             this.Load += new System.EventHandler(this.Form1_Load);
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
+            this.tabControl1.ResumeLayout(false);
+            this.tabPage1.ResumeLayout(false);
+            this.tabPage2.ResumeLayout(false);
+            this.tabPage3.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -313,7 +409,6 @@
         private System.Windows.Forms.TextBox timeBox1;
         private System.Windows.Forms.TextBox timeBox2;
         private System.Windows.Forms.Timer timer1;
-        private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.ToolStripMenuItem toolStripMenuItem1;
         private System.Windows.Forms.ToolStripMenuItem basicTheme;
         private System.Windows.Forms.ToolStripMenuItem toolStripMenuItem3;
@@ -321,6 +416,14 @@
         private System.Windows.Forms.ToolStripMenuItem hypnoToad;
         private System.Windows.Forms.TextBox songInfoBox;
         private System.Windows.Forms.TextBox songBox;
+        private System.Windows.Forms.TabControl tabControl1;
+        private System.Windows.Forms.TabPage tabPage1;
+        private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.TabPage tabPage2;
+        private System.Windows.Forms.WebBrowser webBrowser1;
+        private System.Windows.Forms.TabPage tabPage3;
+        private System.Windows.Forms.WebBrowser webBrowser2;
+        private System.Windows.Forms.ToolStripMenuItem defaultToolStripMenuItem;
     }
 }
 
