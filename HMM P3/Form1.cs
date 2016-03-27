@@ -25,22 +25,8 @@ namespace HMM_P3
 
         private void Form1_Load(object sender, EventArgs e)
         {
-            OpenFileDialog fileopener = new OpenFileDialog();
-            string filename;
-
-            //wmp.PlayStateChange += new AxWMPLib._WMPOCXEvents_PlayStateChangeEventHandler(wmp_PlayStateChange);
-            //wmp.PlayStateChange += new WMPLib.
-
-            fileopener.ShowDialog();
-
-            filename = fileopener.FileName;
-            wmp = new WindowsMediaPlayer();
-            m_playlist = new PlaylistContainer(filename);
-            wmp.URL = m_playlist.getFileName();
-            wmp.controls.play();
-            ContainerVisual vis = new ContainerVisual();
-            //vis.VisualXSnappingGuidelines = 10;
-            //vis.VisualYSnappingGuidelines = 10;
+            wmp = new WindowsMediaPlayerClass();
+            m_playlist = new PlaylistContainer();
         }
 
         private void play_Click(object sender, EventArgs e)
