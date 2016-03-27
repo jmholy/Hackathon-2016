@@ -58,9 +58,19 @@ namespace HMM_P3
             return Curr.SongTitle;
         }
 
+        public string getFileName()
+        {
+            return Curr.FileName;
+        }
+
         public string nextSong()
         {
-            Curr = Curr.Next;
+            if (Curr.Next != null)
+            {
+                Curr = Curr.Next;
+                return null;
+            }
+
             return Curr.FileName;
         }
 
@@ -97,8 +107,8 @@ namespace HMM_P3
                 FileName = name;
                 string[] temp = name.Split('/');
                 SongTitle = temp.Last<string>();
-                Prev = this;
-                Next = this;
+                Prev = null;
+                Next = null;
             }
             public PlaylistNode(string name, PlaylistNode CompleteList)
             {
