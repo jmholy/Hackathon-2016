@@ -279,7 +279,27 @@ namespace HMM_P3
         {
             pictureBox1.Image = Properties.Resources.boring;
             songBox.BackColor = SystemColors.Control;
-            progressBar.ForeColor = SystemColors.HotTrack;
+            progressBar.ForeColor = SystemColors.MenuText;
+        }
+
+        private void windows98HELLToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            
+            pictureBox1.Image = Properties.Resources.windows98;
+            songBox.BackColor = System.Drawing.Color.FromArgb(222,222,222);
+            progressBar.ForeColor = SystemColors.Highlight;
+            string filename = "C:\\Users\\M\\Source\\Repos\\mark-is-a-hakr3\\HMM P3\\Windows-98-startup-sound.wav";
+            wmp.URL = "C:\\Users\\M\\Source\\Repos\\mark-is-a-hakr3\\HMM P3\\Windows-98-startup-sound.wav";
+            string songName;
+            string songListstring = "\0";
+            int j = 1;
+            string[] temp = filename.Split('\\');
+            songName = temp[temp.Length - 1];
+            temp = songName.Split('.');
+            songName = temp[0];
+            songListstring = songName + System.Environment.NewLine;
+            songBox.Text = songListstring;
+            wmp.controls.play();
         }
 
       }

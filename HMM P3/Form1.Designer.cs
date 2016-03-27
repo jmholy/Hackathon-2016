@@ -47,11 +47,12 @@
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
             this.tabPage2 = new System.Windows.Forms.TabPage();
-            this.webBrowser1 = new System.Windows.Forms.WebBrowser();
             this.tabPage3 = new System.Windows.Forms.TabPage();
-            this.webBrowser2 = new System.Windows.Forms.WebBrowser();
             this.defaultToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.windows98HELLToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.webBrowser1 = new System.Windows.Forms.WebBrowser();
+            this.webBrowser2 = new System.Windows.Forms.WebBrowser();
             this.volumeup = new System.Windows.Forms.Button();
             this.volumedown = new System.Windows.Forms.Button();
             this.skipback = new System.Windows.Forms.Button();
@@ -70,7 +71,7 @@
             // 
             this.progressBar.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.progressBar.ForeColor = System.Drawing.SystemColors.HotTrack;
+            this.progressBar.ForeColor = System.Drawing.SystemColors.MenuText;
             this.progressBar.Location = new System.Drawing.Point(10, 468);
             this.progressBar.Name = "progressBar";
             this.progressBar.Size = new System.Drawing.Size(824, 25);
@@ -109,7 +110,8 @@
             this.toolStripMenuItem1.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.defaultToolStripMenuItem,
             this.basicTheme,
-            this.hypnoToad});
+            this.hypnoToad,
+            this.windows98HELLToolStripMenuItem});
             this.toolStripMenuItem1.Name = "toolStripMenuItem1";
             this.toolStripMenuItem1.Size = new System.Drawing.Size(85, 29);
             this.toolStripMenuItem1.Text = "Themes";
@@ -117,14 +119,14 @@
             // basicTheme
             // 
             this.basicTheme.Name = "basicTheme";
-            this.basicTheme.Size = new System.Drawing.Size(194, 30);
+            this.basicTheme.Size = new System.Drawing.Size(239, 30);
             this.basicTheme.Text = "Basic";
             this.basicTheme.Click += new System.EventHandler(this.basicTheme_Click);
             // 
             // hypnoToad
             // 
             this.hypnoToad.Name = "hypnoToad";
-            this.hypnoToad.Size = new System.Drawing.Size(194, 30);
+            this.hypnoToad.Size = new System.Drawing.Size(239, 30);
             this.hypnoToad.Text = "Hypno Toad";
             this.hypnoToad.Click += new System.EventHandler(this.hypnoToad_Click);
             // 
@@ -168,6 +170,8 @@
             // 
             // songInfoBox
             // 
+            this.songInfoBox.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.songInfoBox.BackColor = System.Drawing.SystemColors.ButtonFace;
             this.songInfoBox.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.songInfoBox.Location = new System.Drawing.Point(167, 436);
@@ -197,6 +201,7 @@
             this.tabControl1.Controls.Add(this.tabPage1);
             this.tabControl1.Controls.Add(this.tabPage2);
             this.tabControl1.Controls.Add(this.tabPage3);
+            this.tabControl1.Cursor = System.Windows.Forms.Cursors.Hand;
             this.tabControl1.Location = new System.Drawing.Point(330, 12);
             this.tabControl1.Name = "tabControl1";
             this.tabControl1.SelectedIndex = 0;
@@ -225,20 +230,6 @@
             this.tabPage2.Text = "Random Gifs";
             this.tabPage2.UseVisualStyleBackColor = true;
             // 
-            // webBrowser1
-            // 
-            this.webBrowser1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.webBrowser1.Location = new System.Drawing.Point(3, -3);
-            this.webBrowser1.MinimumSize = new System.Drawing.Size(20, 20);
-            this.webBrowser1.Name = "webBrowser1";
-            this.webBrowser1.ScriptErrorsSuppressed = true;
-            this.webBrowser1.ScrollBarsEnabled = false;
-            this.webBrowser1.Size = new System.Drawing.Size(495, 381);
-            this.webBrowser1.TabIndex = 0;
-            this.webBrowser1.Url = new System.Uri("http://www.gifff.in/", System.UriKind.Absolute);
-            // 
             // tabPage3
             // 
             this.tabPage3.Controls.Add(this.webBrowser2);
@@ -249,24 +240,19 @@
             this.tabPage3.Text = "Random Video";
             this.tabPage3.UseVisualStyleBackColor = true;
             // 
-            // webBrowser2
-            // 
-            this.webBrowser2.AllowNavigation = false;
-            this.webBrowser2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.webBrowser2.Location = new System.Drawing.Point(0, 0);
-            this.webBrowser2.MinimumSize = new System.Drawing.Size(20, 20);
-            this.webBrowser2.Name = "webBrowser2";
-            this.webBrowser2.ScrollBarsEnabled = false;
-            this.webBrowser2.Size = new System.Drawing.Size(498, 378);
-            this.webBrowser2.TabIndex = 0;
-            this.webBrowser2.Url = new System.Uri("https://www.youtube.com/watch?v=dQw4w9WgXcQ?version3", System.UriKind.Absolute);
-            // 
             // defaultToolStripMenuItem
             // 
             this.defaultToolStripMenuItem.Name = "defaultToolStripMenuItem";
-            this.defaultToolStripMenuItem.Size = new System.Drawing.Size(194, 30);
+            this.defaultToolStripMenuItem.Size = new System.Drawing.Size(239, 30);
             this.defaultToolStripMenuItem.Text = "Default";
             this.defaultToolStripMenuItem.Click += new System.EventHandler(this.defaultToolStripMenuItem_Click);
+            // 
+            // windows98HELLToolStripMenuItem
+            // 
+            this.windows98HELLToolStripMenuItem.Name = "windows98HELLToolStripMenuItem";
+            this.windows98HELLToolStripMenuItem.Size = new System.Drawing.Size(239, 30);
+            this.windows98HELLToolStripMenuItem.Text = "Windows 98 HELL";
+            this.windows98HELLToolStripMenuItem.Click += new System.EventHandler(this.windows98HELLToolStripMenuItem_Click);
             // 
             // pictureBox1
             // 
@@ -281,10 +267,37 @@
             this.pictureBox1.TabIndex = 0;
             this.pictureBox1.TabStop = false;
             // 
+            // webBrowser1
+            // 
+            this.webBrowser1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.webBrowser1.Location = new System.Drawing.Point(3, -3);
+            this.webBrowser1.MinimumSize = new System.Drawing.Size(20, 20);
+            this.webBrowser1.Name = "webBrowser1";
+            this.webBrowser1.ScriptErrorsSuppressed = true;
+            this.webBrowser1.ScrollBarsEnabled = false;
+            this.webBrowser1.Size = new System.Drawing.Size(495, 381);
+            this.webBrowser1.TabIndex = 0;
+            this.webBrowser1.Url = new System.Uri("http://www.gifff.in/", System.UriKind.Absolute);
+            // 
+            // webBrowser2
+            // 
+            this.webBrowser2.AllowNavigation = false;
+            this.webBrowser2.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.webBrowser2.Location = new System.Drawing.Point(0, 0);
+            this.webBrowser2.MinimumSize = new System.Drawing.Size(20, 20);
+            this.webBrowser2.Name = "webBrowser2";
+            this.webBrowser2.ScrollBarsEnabled = false;
+            this.webBrowser2.Size = new System.Drawing.Size(498, 378);
+            this.webBrowser2.TabIndex = 0;
+            this.webBrowser2.Url = new System.Uri("https://www.youtube.com/watch?v=dQw4w9WgXcQ?version3", System.UriKind.Absolute);
+            // 
             // volumeup
             // 
             this.volumeup.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
             this.volumeup.AutoSize = true;
+            this.volumeup.Cursor = System.Windows.Forms.Cursors.Hand;
             this.volumeup.Image = ((System.Drawing.Image)(resources.GetObject("volumeup.Image")));
             this.volumeup.Location = new System.Drawing.Point(704, 503);
             this.volumeup.Margin = new System.Windows.Forms.Padding(0);
@@ -298,6 +311,7 @@
             // 
             this.volumedown.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
             this.volumedown.AutoSize = true;
+            this.volumedown.Cursor = System.Windows.Forms.Cursors.Hand;
             this.volumedown.Image = ((System.Drawing.Image)(resources.GetObject("volumedown.Image")));
             this.volumedown.Location = new System.Drawing.Point(566, 503);
             this.volumedown.Margin = new System.Windows.Forms.Padding(0);
@@ -311,6 +325,7 @@
             // 
             this.skipback.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
             this.skipback.AutoSize = true;
+            this.skipback.Cursor = System.Windows.Forms.Cursors.Hand;
             this.skipback.Image = ((System.Drawing.Image)(resources.GetObject("skipback.Image")));
             this.skipback.Location = new System.Drawing.Point(14, 503);
             this.skipback.Margin = new System.Windows.Forms.Padding(0);
@@ -324,6 +339,7 @@
             // 
             this.skipforward.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
             this.skipforward.AutoSize = true;
+            this.skipforward.Cursor = System.Windows.Forms.Cursors.Hand;
             this.skipforward.Image = ((System.Drawing.Image)(resources.GetObject("skipforward.Image")));
             this.skipforward.Location = new System.Drawing.Point(428, 503);
             this.skipforward.Margin = new System.Windows.Forms.Padding(0);
@@ -337,6 +353,7 @@
             // 
             this.pause.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
             this.pause.AutoSize = true;
+            this.pause.Cursor = System.Windows.Forms.Cursors.Hand;
             this.pause.Image = ((System.Drawing.Image)(resources.GetObject("pause.Image")));
             this.pause.Location = new System.Drawing.Point(290, 503);
             this.pause.Margin = new System.Windows.Forms.Padding(0);
@@ -350,6 +367,7 @@
             // 
             this.play.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
             this.play.AutoSize = true;
+            this.play.Cursor = System.Windows.Forms.Cursors.Hand;
             this.play.Image = ((System.Drawing.Image)(resources.GetObject("play.Image")));
             this.play.Location = new System.Drawing.Point(152, 503);
             this.play.Margin = new System.Windows.Forms.Padding(0);
@@ -380,7 +398,7 @@
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MainMenuStrip = this.menuStrip1;
             this.Name = "Form1";
-            this.Text = "HMM P3";
+            this.Text = "Cougar Music Player";
             this.Load += new System.EventHandler(this.Form1_Load);
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
@@ -424,6 +442,7 @@
         private System.Windows.Forms.TabPage tabPage3;
         private System.Windows.Forms.WebBrowser webBrowser2;
         private System.Windows.Forms.ToolStripMenuItem defaultToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem windows98HELLToolStripMenuItem;
     }
 }
 

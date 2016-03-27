@@ -148,4 +148,10 @@
   <data name="boring" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\37ca03b650e069f5d129b85b51ee9f79.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="windows98" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\large_windows_98_wallpaper_by_jlsgraphics-d41y8cx.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Windows_98_startup_sound" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Windows-98-startup-sound.wav;System.IO.MemoryStream, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
 </root>
