@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Windows.Media;
 using WMPLib;
 
 
@@ -35,12 +36,9 @@ namespace HMM_P3
             wmp = new WindowsMediaPlayer();
             wmp.URL = filename;
             wmp.controls.play();
-            /*play.BackgroundImage = ((System.Drawing.Image)(Properties.Resources.PlayButton));
-            pause.BackgroundImage = ((System.Drawing.Image)(Properties.Resources.PauseButton));
-            skipforward.BackgroundImage = ((System.Drawing.Image)(Properties.Resources.SkipForwardButton));
-            skipback.BackgroundImage = ((System.Drawing.Image)(Properties.Resources.SkipBackButton));
-            volumeup.BackgroundImage = ((System.Drawing.Image)(Properties.Resources.VolumeUpButton));
-            volumedown.BackgroundImage = ((System.Drawing.Image)(Properties.Resources.VolumeDownButton));*/
+            ContainerVisual vis = new ContainerVisual();
+            vis.VisualXSnappingGuidelines = 10;
+            vis.VisualYSnappingGuidelines = 10;
         }
 
         private void play_Click(object sender, EventArgs e)
