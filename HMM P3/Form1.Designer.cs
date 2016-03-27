@@ -263,6 +263,7 @@
             this.songBox.Location = new System.Drawing.Point(14, 38);
             this.songBox.Multiline = true;
             this.songBox.Name = "songBox";
+            this.songBox.ReadOnly = true;
             this.songBox.Size = new System.Drawing.Size(405, 385);
             this.songBox.TabIndex = 16;
             // 

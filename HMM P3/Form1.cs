@@ -20,7 +20,8 @@ namespace HMM_P3
         PlaylistContainer m_playlist;
         int sec1 = 0, sec2 = 0;
         int min1 = 0, min2 = 0;
-        string songList = "\0";
+        string[] songList = new String[100];
+        int songcount = 0;
         private const int APPCOMMAND_VOLUME_UP = 0xA0000;
         private const int APPCOMMAND_VOLUME_DOWN = 0x90000;
         private const int WM_APPCOMMAND = 0x319;
@@ -233,9 +234,20 @@ namespace HMM_P3
             foreach (string filename in fileopener.FileNames)
             {
                 m_playlist.addSong(filename);
-                PlaylistContainer temp = new PlaylistContainer();
-                songList = m_playlist.getSongName() + System.Environment.NewLine;
-                songBox.Text = songList;
+                string songName;
+                string songListstring = "\0";
+                string[] temp = filename.Split('\\');
+                songName = temp[temp.Length - 1];
+                temp = songName.Split('.');
+                songName = temp[0];
+                songList[songcount] = songName;
+                songcount++;
+                songListstring = songList[0] + System.Environment.NewLine;
+                for (int k = 0; k < songcount - 1; k++)
+                {
+                    songListstring = songListstring + songList[songcount - 1 - k] + System.Environment.NewLine;
+                }
+                songBox.Text = songListstring;
             }
 
             if (wmp.URL == "")
