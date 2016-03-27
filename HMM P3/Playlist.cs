@@ -53,6 +53,11 @@ namespace HMM_P3
             return Curr.SongTitle;
         }
 
+        public string getFileName()
+        {
+            return Curr.FileName;
+        }
+
         public string nextSong()
         {
             Curr = Curr.Next;
