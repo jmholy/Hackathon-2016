@@ -35,7 +35,8 @@ namespace HMM_P3
 
             filename = fileopener.FileName;
             wmp = new WindowsMediaPlayer();
-            wmp.URL = filename;
+            m_playlist = new PlaylistContainer(filename);
+            wmp.URL = m_playlist.getFileName();
             wmp.controls.play();
             ContainerVisual vis = new ContainerVisual();
             //vis.VisualXSnappingGuidelines = 10;
