@@ -31,6 +31,8 @@ namespace HMM_P3
             m_playlist = new PlaylistContainer();
             wmp.PlayStateChange += new WMPLib._WMPOCXEvents_PlayStateChangeEventHandler(media_PlayStateChange);
             timer1.Interval = 1000;
+            timeBox1.Text = "0:00";
+            timeBox2.Text = "0:00";
         }
 
 
@@ -160,8 +162,8 @@ namespace HMM_P3
         private void timer1_Tick(object sender, EventArgs e)
         {
             int duration = (int)wmp.currentMedia.duration;
-            progressBar.Maximum = 846;
-            progressBar.Increment(846 / duration);
+            progressBar.Maximum = 824;
+            progressBar.Increment(824 / duration);
             if (timeBox2.Text == "0:00" && timeBox1.Text == "0:00")
             {
                 sec2 = duration % 60;
@@ -174,12 +176,12 @@ namespace HMM_P3
             }
             timeBox1.Text = min1 + ":" + sec1.ToString("D2");
             sec1++;
+            timeBox2.Text = "-" + min2 + ":" + sec2.ToString("D2");
             if (sec2 == 0)
             {
                 min2--;
-                sec2 = 59;
+                sec2 = 60;
             }
-            timeBox2.Text = "-" + min2 + ":" + sec2.ToString("D2");
             sec2--;
             if (timeBox2.Text == "0:00" && timeBox1.Text == Convert.ToString(duration))
             {
