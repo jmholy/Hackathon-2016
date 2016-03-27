@@ -29,6 +29,7 @@ namespace HMM_P3
         {
             wmp = new WindowsMediaPlayerClass();
             m_playlist = new PlaylistContainer();
+            wmp.PlayStateChange += new WMPLib._WMPOCXEvents_PlayStateChangeEventHandler(media_PlayStateChange);
             timer1.Interval = 1000;
         }
 
@@ -49,6 +50,29 @@ namespace HMM_P3
                 wmp.URL = m_playlist.getFileName();
             }
             wmp.controls.stop();
+        }
+
+        private void media_PlayStateChange(int state)
+        {
+            string temp = wmp.URL;
+            if ((WMPLib.WMPPlayState) state == WMPLib.WMPPlayState.wmppsMediaEnded)
+            {
+                wmp.URL = m_playlist.nextSong();
+                if (wmp.URL != "")
+                {
+                    wmp.controls.play();
+                }
+                else
+                {
+                    wmp.URL = temp;
+                    wmp.controls.stop();
+                    timer1.Stop();
+                }
+
+                timeBox1.Text = "0:00";
+                timeBox2.Text = "0:00";
+
+            }
         }
 
         private void pause_Click(object sender, EventArgs e)
