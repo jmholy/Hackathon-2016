@@ -108,7 +108,7 @@ namespace HMM_P3
             {
             wmp.controls.pause();
             timer1.Stop();
-        }
+            }
         }
 
         private void play_Click(object sender, EventArgs e)
