@@ -50,6 +50,7 @@
             this.play = new System.Windows.Forms.Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.songInfoBox = new System.Windows.Forms.TextBox();
+            this.songBox = new System.Windows.Forms.TextBox();
             this.menuStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
@@ -254,11 +255,23 @@
             this.songInfoBox.TabIndex = 15;
             this.songInfoBox.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
+            // songBox
+            // 
+            this.songBox.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.songBox.Location = new System.Drawing.Point(14, 38);
+            this.songBox.Multiline = true;
+            this.songBox.Name = "songBox";
+            this.songBox.Size = new System.Drawing.Size(405, 385);
+            this.songBox.TabIndex = 16;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(848, 649);
+            this.Controls.Add(this.songBox);
             this.Controls.Add(this.songInfoBox);
             this.Controls.Add(this.timeBox2);
             this.Controls.Add(this.timeBox1);
@@ -306,6 +319,7 @@
         private System.Windows.Forms.ToolStripMenuItem addSongsToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem hypnoToad;
         private System.Windows.Forms.TextBox songInfoBox;
+        private System.Windows.Forms.TextBox songBox;
     }
 }
 
