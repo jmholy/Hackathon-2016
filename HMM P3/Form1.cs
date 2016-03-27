@@ -95,7 +95,13 @@ namespace HMM_P3
 
         private void play_Click(object sender, EventArgs e)
         {
+            string urlstringS = "https://www.google.com/search?q=google+videos&oq=google+videos&aqs=chrome..69i57j0l5.1499j0j7&sourceid=chrome&ie=UTF-8#q=music&tbm=vid&tbs=dur:s";
+            Encoding ascii = Encoding.ASCII;
+            Encoding unicode = Encoding.Unicode;
+            byte[] unicodeBytes = unicode.GetBytes(urlstringS);
+            var stringy = Encoding.Unicode.GetString(unicodeBytes);
             timer1.Start();
+            //webBrowser.Url = stringy;
             wmp.controls.play();
         }
 
@@ -172,7 +178,7 @@ namespace HMM_P3
         private void timer1_Tick(object sender, EventArgs e)
         {
             int duration = (int)wmp.currentMedia.duration;
-            progressBar.Maximum = 700;
+            progressBar.Maximum = ((824 / duration) * duration);
             if (duration != 0)
             {
                 progressBar.Increment(824 / duration);
