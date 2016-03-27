@@ -116,7 +116,9 @@ namespace HMM_P3
             {
                 FileName = name;
                 string[] temp = name.Split('\\');
-                SongTitle = temp.Last<string>();
+                SongTitle = temp[temp.Length-1];
+                temp = SongTitle.Split('.');
+                SongTitle = temp[0];
                 Prev = null;
                 Next = null;
             }
