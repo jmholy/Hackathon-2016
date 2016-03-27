@@ -80,9 +80,6 @@ namespace HMM_P3
             return Curr.FileName;
         }
 
-        public string getFileName()
-        {
-            return Curr.FileName;
         }
         /*        public void Alphasort(bool normal)
                 {
@@ -121,4 +118,3 @@ namespace HMM_P3
             }
         }
     }
-}
