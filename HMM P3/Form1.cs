@@ -26,8 +26,9 @@ namespace HMM_P3
         {
             OpenFileDialog fileopener = new OpenFileDialog();
             string filename;
+        //    wmp.PlayStateChange += new AxWMPLib._WMPOCXEvents_PlayStateChangeEventHandler(wmp_PlayStateChange);
 
-            
+
             fileopener.ShowDialog();
 
             filename = fileopener.FileName;
@@ -60,6 +61,15 @@ namespace HMM_P3
         private void forward_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void wmp_PlayStateChange(object sender, AxWMPLib._WMPOCXEvents_PlayStateChangeEvent e)
+        {
+            switch(e.newState)
+            {
+//                case 0:
+                    
+            }
         }
 
         private void skipback_Click(object sender, EventArgs e)
