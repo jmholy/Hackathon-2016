@@ -14,20 +14,21 @@ namespace HMM_P3
         public PlaylistContainer(string FileName)
         {
             Curr = new PlaylistNode(FileName);
-        }
 
-        public PlaylistContainer (string[] Folder)
-        {
-            Curr = new PlaylistNode(Folder[0]);
-           for (int i = 1; i < Folder.Length; i++)
-           {
-                addSong(Folder[i]);
-           }
         }
 
         public PlaylistContainer()
         {
             Curr = null;
+        }
+
+        public PlaylistContainer(string[] Folder)
+        {
+            Curr = new PlaylistNode(Folder[0]);
+            for (int i = 1; i < Folder.Length; i++)
+            {
+                addSong(Folder[i]);
+            }
         }
 
         public void addSong()
@@ -76,16 +77,18 @@ namespace HMM_P3
             if (Curr.Next != null)
             {
                 Curr = Curr.Next;
-                return null;
+                return Curr.FileName;
             }
-
-            return Curr.FileName;
+            return null;
+            
         }
 
         public string prevSong()
         {
             Curr = Curr.Prev;
             return Curr.FileName;
+        }
+
         }
         /*        public void Alphasort(bool normal)
                 {
@@ -124,4 +127,3 @@ namespace HMM_P3
             }
         }
     }
-}

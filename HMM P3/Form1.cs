@@ -140,5 +140,19 @@ namespace HMM_P3
         {
             progressBar.Increment(5);
         }
+
+        private void addSongsToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            OpenFileDialog fileopener = new OpenFileDialog();
+            fileopener.Multiselect = true;
+            fileopener.ShowDialog();
+
+            foreach (string filename in fileopener.FileNames)
+            {
+                m_playlist.addSong(filename);
+            }
+
+            wmp.URL = m_playlist.getFileName();
+        }
     }
 }
