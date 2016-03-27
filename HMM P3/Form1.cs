@@ -30,6 +30,7 @@ namespace HMM_P3
             wmp = new WindowsMediaPlayerClass();
             m_playlist = new PlaylistContainer();
             wmp.PlayStateChange += new WMPLib._WMPOCXEvents_PlayStateChangeEventHandler(media_PlayStateChange);
+            
             timer1.Interval = 1000;
             timeBox1.Text = "0:00";
             timeBox2.Text = "0:00";
@@ -231,5 +232,16 @@ namespace HMM_P3
             }
 
         }
+
+        private void basicTheme_Click(object sender, EventArgs e)
+        {
+            pictureBox1.Image = Properties.Resources.cougtiled3;
+        }
+
+        private void hypnoToad_Click(object sender, EventArgs e)
+        {
+            pictureBox1.Image = Properties.Resources.hypnotoad;
+        }
+
       }
 }
