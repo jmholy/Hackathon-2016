@@ -54,7 +54,15 @@ namespace HMM_P3
             if ((WMPLib.WMPPlayState) state == WMPLib.WMPPlayState.wmppsMediaEnded)
             {
                 string temp = wmp.URL;
-                wmp.URL = m_playlist.nextSong();
+                if (repeat < 2)
+                {
+                    wmp.URL = m_playlist.nextSong(repeat);
+                }
+                else
+                {
+                    wmp.URL = m_playlist.nextSong();
+                }
+                //wmp.URL = m_playlist.nextSong();
                 if (wmp.URL != "")
                 {
                     wmp.controls.play();
@@ -258,15 +266,17 @@ namespace HMM_P3
             foreach (string filename in fileopener.FileNames)
             {
                 m_playlist.addSong(filename);
+                songCount++;
             }
 
             i = m_playlist.SongList();
-
-            foreach(string title in i)
+            string listString = String.Empty;
+            listString =  "1 - " + i[0] + System.Environment.NewLine;
+            for (int k = 1; k < songCount-1; k++)
             {
-                songBox.Text += songCount + " - " + title + System.Environment.NewLine;
-                songCount++;
+                listString = listString + (k+1) + " - " + i[k] + System.Environment.NewLine;
             }
+            songBox.Text = listString;
 
             if (wmp.URL == "")
             {
@@ -285,10 +295,10 @@ namespace HMM_P3
 
         private void windows98HELLToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            
             pictureBox1.Image = Properties.Resources.windows98;
             songBox.BackColor = System.Drawing.Color.FromArgb(222,222,222);
             progressBar.ForeColor = SystemColors.Highlight;
+            m_playlist = new PlaylistContainer();
             //string filename = "C:\\Users\\M\\Source\\Repos\\mark-is-a-hakr3\\HMM P3\\Windows-98-startup-sound.wav";
             //wmp.URL = "C:\\Users\\M\\Source\\Repos\\mark-is-a-hakr3\\HMM P3\\Windows-98-startup-sound.wav";
             //string songName;
@@ -303,8 +313,8 @@ namespace HMM_P3
             //wmp.controls.play();
             string filename = "C:\\Users\\M\\Source\\Repos\\mark-is-a-hakr3\\HMM P3\\Windows-98-startup-sound.wav";
             m_playlist.addSong(filename);
+            songBox.Text = m_playlist.getSongName(); 
             wmp.URL = m_playlist.getFileName();
-            repeat = 0;
         }
 
     }

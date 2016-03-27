@@ -124,11 +124,14 @@ namespace HMM_P3
             {
                 playlistlist.Add(current.SongTitle);
             }
-
-            while (current.Next != null)
+            else
             {
+                while (current.Next != null)
+                {
+                    playlistlist.Add(current.SongTitle);
+                    current = current.Next;
+                }
                 playlistlist.Add(current.SongTitle);
-                current = current.Next;
             }
 
             return playlistlist;

@@ -72,10 +72,9 @@
             this.progressBar.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.progressBar.ForeColor = System.Drawing.SystemColors.MenuText;
-            this.progressBar.Location = new System.Drawing.Point(18, 725);
-            this.progressBar.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.progressBar.Location = new System.Drawing.Point(10, 468);
             this.progressBar.Name = "progressBar";
-            this.progressBar.Size = new System.Drawing.Size(1465, 39);
+            this.progressBar.Size = new System.Drawing.Size(824, 25);
             this.progressBar.TabIndex = 10;
             this.progressBar.Click += new System.EventHandler(this.progressBar_Click);
             // 
@@ -87,8 +86,8 @@
             this.toolStripMenuItem1});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Padding = new System.Windows.Forms.Padding(16, 5, 0, 5);
-            this.menuStrip1.Size = new System.Drawing.Size(1508, 55);
+            this.menuStrip1.Padding = new System.Windows.Forms.Padding(9, 3, 0, 3);
+            this.menuStrip1.Size = new System.Drawing.Size(848, 35);
             this.menuStrip1.TabIndex = 13;
             // 
             // toolStripMenuItem3
@@ -96,13 +95,13 @@
             this.toolStripMenuItem3.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.addSongsToolStripMenuItem});
             this.toolStripMenuItem3.Name = "toolStripMenuItem3";
-            this.toolStripMenuItem3.Size = new System.Drawing.Size(112, 45);
+            this.toolStripMenuItem3.Size = new System.Drawing.Size(74, 29);
             this.toolStripMenuItem3.Text = "Songs";
             // 
             // addSongsToolStripMenuItem
             // 
             this.addSongsToolStripMenuItem.Name = "addSongsToolStripMenuItem";
-            this.addSongsToolStripMenuItem.Size = new System.Drawing.Size(278, 46);
+            this.addSongsToolStripMenuItem.Size = new System.Drawing.Size(186, 30);
             this.addSongsToolStripMenuItem.Text = "Add Songs";
             this.addSongsToolStripMenuItem.Click += new System.EventHandler(this.addSongsToolStripMenuItem_Click_1);
             // 
@@ -114,34 +113,34 @@
             this.hypnoToad,
             this.windows98HELLToolStripMenuItem});
             this.toolStripMenuItem1.Name = "toolStripMenuItem1";
-            this.toolStripMenuItem1.Size = new System.Drawing.Size(134, 45);
+            this.toolStripMenuItem1.Size = new System.Drawing.Size(85, 29);
             this.toolStripMenuItem1.Text = "Themes";
             // 
             // defaultToolStripMenuItem
             // 
             this.defaultToolStripMenuItem.Name = "defaultToolStripMenuItem";
-            this.defaultToolStripMenuItem.Size = new System.Drawing.Size(368, 46);
+            this.defaultToolStripMenuItem.Size = new System.Drawing.Size(239, 30);
             this.defaultToolStripMenuItem.Text = "Default";
             this.defaultToolStripMenuItem.Click += new System.EventHandler(this.defaultToolStripMenuItem_Click);
             // 
             // basicTheme
             // 
             this.basicTheme.Name = "basicTheme";
-            this.basicTheme.Size = new System.Drawing.Size(368, 46);
+            this.basicTheme.Size = new System.Drawing.Size(239, 30);
             this.basicTheme.Text = "Basic";
             this.basicTheme.Click += new System.EventHandler(this.basicTheme_Click);
             // 
             // hypnoToad
             // 
             this.hypnoToad.Name = "hypnoToad";
-            this.hypnoToad.Size = new System.Drawing.Size(368, 46);
+            this.hypnoToad.Size = new System.Drawing.Size(239, 30);
             this.hypnoToad.Text = "Hypno Toad";
             this.hypnoToad.Click += new System.EventHandler(this.hypnoToad_Click);
             // 
             // windows98HELLToolStripMenuItem
             // 
             this.windows98HELLToolStripMenuItem.Name = "windows98HELLToolStripMenuItem";
-            this.windows98HELLToolStripMenuItem.Size = new System.Drawing.Size(368, 46);
+            this.windows98HELLToolStripMenuItem.Size = new System.Drawing.Size(239, 30);
             this.windows98HELLToolStripMenuItem.Text = "Windows 98 HELL";
             this.windows98HELLToolStripMenuItem.Click += new System.EventHandler(this.windows98HELLToolStripMenuItem_Click);
             // 
@@ -160,10 +159,10 @@
             this.timeBox1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.timeBox1.BackColor = System.Drawing.SystemColors.ButtonFace;
             this.timeBox1.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.timeBox1.Location = new System.Drawing.Point(21, 690);
-            this.timeBox1.Margin = new System.Windows.Forms.Padding(7, 8, 7, 8);
+            this.timeBox1.Location = new System.Drawing.Point(12, 445);
+            this.timeBox1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.timeBox1.Name = "timeBox1";
-            this.timeBox1.Size = new System.Drawing.Size(263, 31);
+            this.timeBox1.Size = new System.Drawing.Size(148, 19);
             this.timeBox1.TabIndex = 11;
             // 
             // timeBox2
@@ -171,11 +170,11 @@
             this.timeBox2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.timeBox2.BackColor = System.Drawing.SystemColors.ButtonFace;
             this.timeBox2.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.timeBox2.Location = new System.Drawing.Point(1216, 690);
-            this.timeBox2.Margin = new System.Windows.Forms.Padding(7, 8, 7, 8);
+            this.timeBox2.Location = new System.Drawing.Point(684, 445);
+            this.timeBox2.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.timeBox2.Name = "timeBox2";
             this.timeBox2.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.timeBox2.Size = new System.Drawing.Size(263, 31);
+            this.timeBox2.Size = new System.Drawing.Size(148, 19);
             this.timeBox2.TabIndex = 12;
             this.timeBox2.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
@@ -189,25 +188,22 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.songInfoBox.BackColor = System.Drawing.SystemColors.ButtonFace;
             this.songInfoBox.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.songInfoBox.Location = new System.Drawing.Point(297, 676);
-            this.songInfoBox.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.songInfoBox.Location = new System.Drawing.Point(167, 436);
             this.songInfoBox.Name = "songInfoBox";
-            this.songInfoBox.Size = new System.Drawing.Size(907, 31);
+            this.songInfoBox.Size = new System.Drawing.Size(510, 19);
             this.songInfoBox.TabIndex = 15;
             this.songInfoBox.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // songBox
             // 
-            this.songBox.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
+            this.songBox.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left)));
             this.songBox.Font = new System.Drawing.Font("Lucida Console", 10F);
-            this.songBox.Location = new System.Drawing.Point(25, 59);
-            this.songBox.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.songBox.Location = new System.Drawing.Point(14, 38);
             this.songBox.Multiline = true;
             this.songBox.Name = "songBox";
             this.songBox.ReadOnly = true;
-            this.songBox.Size = new System.Drawing.Size(548, 595);
+            this.songBox.Size = new System.Drawing.Size(310, 385);
             this.songBox.TabIndex = 16;
             // 
             // tabControl1
@@ -219,21 +215,19 @@
             this.tabControl1.Controls.Add(this.tabPage2);
             this.tabControl1.Controls.Add(this.tabPage3);
             this.tabControl1.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.tabControl1.Location = new System.Drawing.Point(587, 19);
-            this.tabControl1.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.tabControl1.Location = new System.Drawing.Point(330, 12);
             this.tabControl1.Name = "tabControl1";
             this.tabControl1.SelectedIndex = 0;
-            this.tabControl1.Size = new System.Drawing.Size(900, 637);
+            this.tabControl1.Size = new System.Drawing.Size(506, 411);
             this.tabControl1.TabIndex = 17;
             // 
             // tabPage1
             // 
             this.tabPage1.Controls.Add(this.pictureBox1);
-            this.tabPage1.Location = new System.Drawing.Point(10, 48);
-            this.tabPage1.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.tabPage1.Location = new System.Drawing.Point(4, 29);
             this.tabPage1.Name = "tabPage1";
-            this.tabPage1.Padding = new System.Windows.Forms.Padding(5, 5, 5, 5);
-            this.tabPage1.Size = new System.Drawing.Size(880, 579);
+            this.tabPage1.Padding = new System.Windows.Forms.Padding(3, 3, 3, 3);
+            this.tabPage1.Size = new System.Drawing.Size(498, 378);
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "Image";
             this.tabPage1.UseVisualStyleBackColor = true;
@@ -244,10 +238,9 @@
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.pictureBox1.Image = global::HMM_P3.Properties.Resources.boring;
-            this.pictureBox1.Location = new System.Drawing.Point(0, 5);
-            this.pictureBox1.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.pictureBox1.Location = new System.Drawing.Point(0, 3);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(889, 581);
+            this.pictureBox1.Size = new System.Drawing.Size(500, 375);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox1.TabIndex = 0;
             this.pictureBox1.TabStop = false;
@@ -255,11 +248,10 @@
             // tabPage2
             // 
             this.tabPage2.Controls.Add(this.webBrowser1);
-            this.tabPage2.Location = new System.Drawing.Point(10, 48);
-            this.tabPage2.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.tabPage2.Location = new System.Drawing.Point(4, 29);
             this.tabPage2.Name = "tabPage2";
-            this.tabPage2.Padding = new System.Windows.Forms.Padding(5, 5, 5, 5);
-            this.tabPage2.Size = new System.Drawing.Size(880, 579);
+            this.tabPage2.Padding = new System.Windows.Forms.Padding(3, 3, 3, 3);
+            this.tabPage2.Size = new System.Drawing.Size(498, 378);
             this.tabPage2.TabIndex = 1;
             this.tabPage2.Text = "Random Gifs";
             this.tabPage2.UseVisualStyleBackColor = true;
@@ -269,23 +261,21 @@
             this.webBrowser1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.webBrowser1.Location = new System.Drawing.Point(5, -5);
-            this.webBrowser1.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
-            this.webBrowser1.MinimumSize = new System.Drawing.Size(36, 31);
+            this.webBrowser1.Location = new System.Drawing.Point(3, -3);
+            this.webBrowser1.MinimumSize = new System.Drawing.Size(20, 20);
             this.webBrowser1.Name = "webBrowser1";
             this.webBrowser1.ScriptErrorsSuppressed = true;
             this.webBrowser1.ScrollBarsEnabled = false;
-            this.webBrowser1.Size = new System.Drawing.Size(880, 591);
+            this.webBrowser1.Size = new System.Drawing.Size(495, 381);
             this.webBrowser1.TabIndex = 0;
             this.webBrowser1.Url = new System.Uri("http://www.gifff.in/", System.UriKind.Absolute);
             // 
             // tabPage3
             // 
             this.tabPage3.Controls.Add(this.webBrowser2);
-            this.tabPage3.Location = new System.Drawing.Point(10, 48);
-            this.tabPage3.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.tabPage3.Location = new System.Drawing.Point(4, 29);
             this.tabPage3.Name = "tabPage3";
-            this.tabPage3.Size = new System.Drawing.Size(880, 579);
+            this.tabPage3.Size = new System.Drawing.Size(498, 378);
             this.tabPage3.TabIndex = 2;
             this.tabPage3.Text = "Random Video";
             this.tabPage3.UseVisualStyleBackColor = true;
@@ -295,11 +285,10 @@
             this.webBrowser2.AllowNavigation = false;
             this.webBrowser2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.webBrowser2.Location = new System.Drawing.Point(0, 0);
-            this.webBrowser2.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
-            this.webBrowser2.MinimumSize = new System.Drawing.Size(36, 31);
+            this.webBrowser2.MinimumSize = new System.Drawing.Size(20, 20);
             this.webBrowser2.Name = "webBrowser2";
             this.webBrowser2.ScrollBarsEnabled = false;
-            this.webBrowser2.Size = new System.Drawing.Size(880, 579);
+            this.webBrowser2.Size = new System.Drawing.Size(498, 378);
             this.webBrowser2.TabIndex = 0;
             this.webBrowser2.Url = new System.Uri("https://www.youtube.com/watch?v=dQw4w9WgXcQ?version3", System.UriKind.Absolute);
             // 
@@ -309,10 +298,10 @@
             this.volumeup.AutoSize = true;
             this.volumeup.Cursor = System.Windows.Forms.Cursors.Hand;
             this.volumeup.Image = ((System.Drawing.Image)(resources.GetObject("volumeup.Image")));
-            this.volumeup.Location = new System.Drawing.Point(1252, 780);
+            this.volumeup.Location = new System.Drawing.Point(704, 503);
             this.volumeup.Margin = new System.Windows.Forms.Padding(0);
             this.volumeup.Name = "volumeup";
-            this.volumeup.Size = new System.Drawing.Size(228, 198);
+            this.volumeup.Size = new System.Drawing.Size(128, 128);
             this.volumeup.TabIndex = 9;
             this.volumeup.UseVisualStyleBackColor = true;
             this.volumeup.Click += new System.EventHandler(this.volumeup_Click);
@@ -323,10 +312,10 @@
             this.volumedown.AutoSize = true;
             this.volumedown.Cursor = System.Windows.Forms.Cursors.Hand;
             this.volumedown.Image = ((System.Drawing.Image)(resources.GetObject("volumedown.Image")));
-            this.volumedown.Location = new System.Drawing.Point(1006, 780);
+            this.volumedown.Location = new System.Drawing.Point(566, 503);
             this.volumedown.Margin = new System.Windows.Forms.Padding(0);
             this.volumedown.Name = "volumedown";
-            this.volumedown.Size = new System.Drawing.Size(228, 198);
+            this.volumedown.Size = new System.Drawing.Size(128, 128);
             this.volumedown.TabIndex = 8;
             this.volumedown.UseVisualStyleBackColor = true;
             this.volumedown.Click += new System.EventHandler(this.volumedown_Click);
@@ -337,10 +326,10 @@
             this.skipback.AutoSize = true;
             this.skipback.Cursor = System.Windows.Forms.Cursors.Hand;
             this.skipback.Image = ((System.Drawing.Image)(resources.GetObject("skipback.Image")));
-            this.skipback.Location = new System.Drawing.Point(25, 780);
+            this.skipback.Location = new System.Drawing.Point(14, 503);
             this.skipback.Margin = new System.Windows.Forms.Padding(0);
             this.skipback.Name = "skipback";
-            this.skipback.Size = new System.Drawing.Size(228, 198);
+            this.skipback.Size = new System.Drawing.Size(128, 128);
             this.skipback.TabIndex = 6;
             this.skipback.UseVisualStyleBackColor = true;
             this.skipback.Click += new System.EventHandler(this.skipback_Click);
@@ -351,10 +340,10 @@
             this.skipforward.AutoSize = true;
             this.skipforward.Cursor = System.Windows.Forms.Cursors.Hand;
             this.skipforward.Image = ((System.Drawing.Image)(resources.GetObject("skipforward.Image")));
-            this.skipforward.Location = new System.Drawing.Point(761, 780);
+            this.skipforward.Location = new System.Drawing.Point(428, 503);
             this.skipforward.Margin = new System.Windows.Forms.Padding(0);
             this.skipforward.Name = "skipforward";
-            this.skipforward.Size = new System.Drawing.Size(228, 198);
+            this.skipforward.Size = new System.Drawing.Size(128, 128);
             this.skipforward.TabIndex = 3;
             this.skipforward.UseVisualStyleBackColor = true;
             this.skipforward.Click += new System.EventHandler(this.skipforward_Click);
@@ -365,10 +354,10 @@
             this.pause.AutoSize = true;
             this.pause.Cursor = System.Windows.Forms.Cursors.Hand;
             this.pause.Image = ((System.Drawing.Image)(resources.GetObject("pause.Image")));
-            this.pause.Location = new System.Drawing.Point(516, 780);
+            this.pause.Location = new System.Drawing.Point(290, 503);
             this.pause.Margin = new System.Windows.Forms.Padding(0);
             this.pause.Name = "pause";
-            this.pause.Size = new System.Drawing.Size(228, 198);
+            this.pause.Size = new System.Drawing.Size(128, 128);
             this.pause.TabIndex = 2;
             this.pause.UseVisualStyleBackColor = true;
             this.pause.Click += new System.EventHandler(this.pause_Click);
@@ -379,19 +368,19 @@
             this.play.AutoSize = true;
             this.play.Cursor = System.Windows.Forms.Cursors.Hand;
             this.play.Image = ((System.Drawing.Image)(resources.GetObject("play.Image")));
-            this.play.Location = new System.Drawing.Point(270, 780);
+            this.play.Location = new System.Drawing.Point(152, 503);
             this.play.Margin = new System.Windows.Forms.Padding(0);
             this.play.Name = "play";
-            this.play.Size = new System.Drawing.Size(228, 198);
+            this.play.Size = new System.Drawing.Size(128, 128);
             this.play.TabIndex = 1;
             this.play.UseVisualStyleBackColor = true;
             this.play.Click += new System.EventHandler(this.play_Click);
             // 
             // Form1
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(16F, 31F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1508, 1006);
+            this.ClientSize = new System.Drawing.Size(848, 649);
             this.Controls.Add(this.songInfoBox);
             this.Controls.Add(this.tabControl1);
             this.Controls.Add(this.songBox);
@@ -407,7 +396,6 @@
             this.Controls.Add(this.menuStrip1);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MainMenuStrip = this.menuStrip1;
-            this.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
             this.Name = "Form1";
             this.Text = "Cougar Music Player";
             this.Load += new System.EventHandler(this.Form1_Load);
