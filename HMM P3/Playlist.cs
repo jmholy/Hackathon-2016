@@ -83,6 +83,23 @@ namespace HMM_P3
             return null;  
         }
 
+        public string nextSong(int repeat)
+        {
+            if (repeat == 0)
+            {
+                return Curr.FileName;
+            }
+            else
+            {
+                PlaylistNode start = Curr;
+                while (start.Prev != null)
+                {
+                    start = start.Prev;
+                }
+                return start.FileName;
+            }
+        }
+
         public string prevSong()
         {
             if (Curr.Prev != null)
@@ -93,42 +110,80 @@ namespace HMM_P3
             return null;
         }
 
-
-        }
-
-        internal class PlaylistNode
+        public List<string> SongList()
         {
-            internal string SongTitle;
-            internal string FileName;
-            internal PlaylistNode Prev, Next;
+            PlaylistNode current = Curr;
+            List<string> playlistlist = new List<string>();
 
-            public PlaylistNode(string name)
+            while (current.Prev != null)
             {
-                FileName = name;
-                string[] temp = name.Split('\\');
-                SongTitle = temp[temp.Length-1];
-                temp = SongTitle.Split('.');
-                SongTitle = temp[0];
-
-                Prev = null;
-                Next = null;
+                current = current.Prev;
             }
-            public PlaylistNode(string name, PlaylistNode CompleteList)
+
+            if (current.Next == null)
             {
-                FileName = name;
-                string[] temp = name.Split('\\');
-                SongTitle = temp[temp.Length - 1];
-                temp = SongTitle.Split('.');
-                SongTitle = temp[0];
-
-                Prev = CompleteList;
-                Next = CompleteList.Next;
-                if (CompleteList.Next != null)
-                {
-                    CompleteList.Next.Prev = this;
-                }
-
-                CompleteList.Next = this;
+                playlistlist.Add(current.SongTitle);
             }
+
+            while (current.Next != null)
+            {
+                playlistlist.Add(current.SongTitle);
+                current = current.Next;
+            }
+
+            return playlistlist;
+        }
+             
+        //public string Remove(string fileName)
+        //{
+        //    //PlaylistNode temp = Curr.Prev;
+        //    //temp.Next = null;
+
+        //}
+}
+
+    internal class PlaylistNode
+    {
+        internal string SongTitle;
+        internal string FileName;
+        internal PlaylistNode Prev, Next;
+
+        public PlaylistNode(string name)
+        {
+            FileName = name;
+            string[] temp = name.Split('\\');
+            SongTitle = temp[temp.Length-1];
+            temp = SongTitle.Split('.');
+            SongTitle = temp[0];
+
+            Prev = null;
+            Next = null;
+         }
+        public PlaylistNode(string name, PlaylistNode CompleteList)
+         {
+            FileName = name;
+            string[] temp = name.Split('\\');
+            SongTitle = temp[temp.Length - 1];
+            temp = SongTitle.Split('.');
+            SongTitle = temp[0];
+
+            //Prev = CompleteList;
+            //Next = CompleteList.Next;
+            //if (CompleteList.Next != null)
+            //{
+            //    CompleteList.Next.Prev = this;
+            //}
+
+            //CompleteList.Next = this;
+            PlaylistNode current = CompleteList;
+            
+            while (current.Next != null)
+            {
+                current = current.Next;
+            }
+
+            current.Next = new PlaylistNode(name);
+            current.Next.Prev = current;
         }
     }
+}

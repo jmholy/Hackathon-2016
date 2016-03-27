@@ -21,8 +21,9 @@ namespace HMM_P3
         int sec1 = 0, sec2 = 0;
         int min1 = 0, min2 = 0;
         int refresh = 0;
+        int repeat = 200;
         string[] songList = new String[100];
-        int songcount = 0;
+        int songCount = 1;
         private const int APPCOMMAND_VOLUME_UP = 0xA0000;
         private const int APPCOMMAND_VOLUME_DOWN = 0x90000;
         private const int WM_APPCOMMAND = 0x319;
@@ -158,7 +159,14 @@ namespace HMM_P3
             if (temp != "")
             {
                 wmp.controls.stop();
-                wmp.URL = m_playlist.nextSong();
+                if (repeat < 2)
+                {
+                    wmp.URL = m_playlist.nextSong(repeat);
+                }
+                else
+                {
+                    wmp.URL = m_playlist.nextSong();
+                }
                 if (wmp.URL != "")
                 {
                     wmp.controls.play();
@@ -167,7 +175,7 @@ namespace HMM_P3
                 else
                 {
                     wmp.URL = temp;
-                    //wmp.controls.stop();
+                    wmp.controls.stop();
                 }   
             }
         }
@@ -229,7 +237,7 @@ namespace HMM_P3
             pictureBox1.Image = Properties.Resources.cougtiled3;
             songBox.BackColor = System.Drawing.Color.FromArgb(232, 46, 46);
             progressBar.ForeColor = System.Drawing.Color.FromArgb(232, 46, 46);
-
+            repeat = 200;
         }
 
         private void hypnoToad_Click(object sender, EventArgs e)
@@ -237,11 +245,12 @@ namespace HMM_P3
             pictureBox1.Image = Properties.Resources.hypnotoad;
             songBox.BackColor = System.Drawing.Color.FromArgb(61, 255, 13);
             progressBar.ForeColor = System.Drawing.Color.FromArgb(61, 255, 13);
-
+            repeat = 200;
         }
 
         private void addSongsToolStripMenuItem_Click_1(object sender, EventArgs e)
         {
+            List<string> i;
             OpenFileDialog fileopener = new OpenFileDialog();
             fileopener.Multiselect = true;
             fileopener.ShowDialog();
@@ -249,22 +258,14 @@ namespace HMM_P3
             foreach (string filename in fileopener.FileNames)
             {
                 m_playlist.addSong(filename);
-                string songName;
-                string songListstring = "\0";
-                int j = 1;
-                string[] temp = filename.Split('\\');
-                songName = temp[temp.Length - 1];
-                temp = songName.Split('.');
-                songName = temp[0];
-                songList[songcount] = songName;
-                songcount++;
-                songListstring = "1 - " + songList[0] + System.Environment.NewLine;
-                for (int k = 0; k < songcount - 1; k++)
-                {
-                    j++;
-                    songListstring = songListstring + j + " - " + songList[songcount - 1 - k] + System.Environment.NewLine;
-                }
-                songBox.Text = songListstring;
+            }
+
+            i = m_playlist.SongList();
+
+            foreach(string title in i)
+            {
+                songBox.Text += songCount + " - " + title + System.Environment.NewLine;
+                songCount++;
             }
 
             if (wmp.URL == "")
@@ -288,19 +289,23 @@ namespace HMM_P3
             pictureBox1.Image = Properties.Resources.windows98;
             songBox.BackColor = System.Drawing.Color.FromArgb(222,222,222);
             progressBar.ForeColor = SystemColors.Highlight;
+            //string filename = "C:\\Users\\M\\Source\\Repos\\mark-is-a-hakr3\\HMM P3\\Windows-98-startup-sound.wav";
+            //wmp.URL = "C:\\Users\\M\\Source\\Repos\\mark-is-a-hakr3\\HMM P3\\Windows-98-startup-sound.wav";
+            //string songName;
+            //string songListstring = "\0";
+            //int j = 1;
+            //string[] temp = filename.Split('\\');
+            //songName = temp[temp.Length - 1];
+            //temp = songName.Split('.');
+            //songName = temp[0];
+            //songListstring = songName + System.Environment.NewLine;
+            //songBox.Text = songListstring;
+            //wmp.controls.play();
             string filename = "C:\\Users\\M\\Source\\Repos\\mark-is-a-hakr3\\HMM P3\\Windows-98-startup-sound.wav";
-            wmp.URL = "C:\\Users\\M\\Source\\Repos\\mark-is-a-hakr3\\HMM P3\\Windows-98-startup-sound.wav";
-            string songName;
-            string songListstring = "\0";
-            int j = 1;
-            string[] temp = filename.Split('\\');
-            songName = temp[temp.Length - 1];
-            temp = songName.Split('.');
-            songName = temp[0];
-            songListstring = songName + System.Environment.NewLine;
-            songBox.Text = songListstring;
-            wmp.controls.play();
+            m_playlist.addSong(filename);
+            wmp.URL = m_playlist.getFileName();
+            repeat = 0;
         }
 
-      }
+    }
 }
