@@ -14,7 +14,15 @@ namespace HMM_P3
         public PlaylistContainer(string FileName)
         {
             Curr = new PlaylistNode(FileName);
+        }
 
+        public PlaylistContainer (string[] Folder)
+        {
+            Curr = new PlaylistNode(Folder[0]);
+           for (int i = 1; i < Folder.Length; i++)
+           {
+                addSong(Folder[i]);
+           }
         }
 
         public PlaylistContainer()
@@ -77,11 +85,6 @@ namespace HMM_P3
         public string prevSong()
         {
             Curr = Curr.Prev;
-            return Curr.FileName;
-        }
-
-        public string getFileName()
-        {
             return Curr.FileName;
         }
         /*        public void Alphasort(bool normal)
