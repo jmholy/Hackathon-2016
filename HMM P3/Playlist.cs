@@ -60,6 +60,7 @@ namespace HMM_P3
             {
                 Curr = new PlaylistNode(fileName);
             }
+
         }
 
         public string getSongName()

@@ -27,9 +27,6 @@ namespace HMM_P3
         {
             wmp = new WindowsMediaPlayerClass();
             m_playlist = new PlaylistContainer();
-            timeBox1.Text = "0";
-            timeBox2.Text = "0";
-            timer1.Interval = 1000;
         }
 
 
@@ -58,7 +55,6 @@ namespace HMM_P3
         private void play_Click(object sender, EventArgs e)
         {
             wmp.controls.play();
-            timer1.Start();
         }
 
         private void progressBar_Click(object sender, EventArgs e)
@@ -131,17 +127,12 @@ namespace HMM_P3
             }
         }
 
-        private void timer1_Tick(object sender, EventArgs e)
+        private void WMPTest()
         {
-            int duration = (int)wmp.currentMedia.duration;
-            progressBar.Maximum = 846;
-            progressBar.Increment(846 / duration);
-            timeBox1.Text = Convert.ToInt32(timeBox1.Text) + 1 + "";
-            if (Convert.ToInt32(timeBox2.Text) < duration)
-            {
-                timeBox2.Text = Convert.ToString(duration);
-            }
-            timeBox1.Text = Convert.ToInt32(timeBox1.Text) - 1 + "";
+            //Windows
+            WindowsMediaPlayer wmp = new WindowsMediaPlayer();
+            wmp.URL = "C:\\Users\\Matthew\\Source\\Repos\\mark-is-a-hakr\\HMM P3\\62 - A_Rival - Crypt of the Necrodancer OST - Deep Sea Bass (Coral Riff Remix).mp3";
+            wmp.controls.play();
         }
 
       }
