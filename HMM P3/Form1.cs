@@ -56,9 +56,10 @@ namespace HMM_P3
 
         private void media_PlayStateChange(int state)
         {
-            string temp = wmp.URL;
+            
             if ((WMPLib.WMPPlayState) state == WMPLib.WMPPlayState.wmppsMediaEnded)
             {
+                string temp = wmp.URL;
                 wmp.URL = m_playlist.nextSong();
                 if (wmp.URL != "")
                 {
@@ -69,34 +70,55 @@ namespace HMM_P3
                     wmp.URL = temp;
                     wmp.controls.stop();
                     timer1.Stop();
+                    timeBox1.Text = "0:00";
+                    timeBox2.Text = "0:00";
                 }
 
-                timeBox1.Text = "0:00";
-                timeBox2.Text = "0:00";
-
+                min1 = 0;
+                sec1 = 0;
+                min2 = 0;
+                sec2 = 0;
+                progressBar.Value = 0;
             }
             else if ((WMPLib.WMPPlayState)state == WMPLib.WMPPlayState.wmppsStopped)
             {
                 timeBox1.Text = "0:00";
                 timeBox2.Text = "0:00";
+                min1 = 0;
+                sec1 = 0;
+                min2 = 0;
+                sec2 = 0;
+
                 timer1.Stop();
+                progressBar.Value = 0;
             }
             else if ((WMPLib.WMPPlayState)state == WMPLib.WMPPlayState.wmppsPaused)
             {
                 timer1.Stop();
             }
+            else if ((WMPLib.WMPPlayState)state == WMPLib.WMPPlayState.wmppsPlaying)
+            {
+                timer1.Start();
+            }
         }
 
         private void pause_Click(object sender, EventArgs e)
         {
-            wmp.controls.pause();
-            timer1.Stop();
+            if (wmp.URL != null)
+            {
+                wmp.controls.pause();
+                timer1.Stop();
+            }
         }
 
         private void play_Click(object sender, EventArgs e)
         {
-            timer1.Start();
-            wmp.controls.play();
+            if (wmp.URL != "")
+            {
+                timer1.Start();
+                wmp.controls.play();
+            }
+
         }
 
         private void progressBar_Click(object sender, EventArgs e)
@@ -106,29 +128,33 @@ namespace HMM_P3
 
         private void skipback_Click(object sender, EventArgs e)
         {
-            /*
-            if(songprogressBar < 5)//<-------------- This is totally not the correct name
+            
+            if(sec1 > 5 || min1 > 1)//<-------------- This is totally not the correct name
             {
-                wmp.controls.stop();
-                wmp.controls.play();
+                    wmp.controls.stop();
+                    wmp.controls.play();
             }
             else
-            {*/
-            string temp = m_playlist.getFileName();
-            wmp.URL = m_playlist.prevSong();
+            {
+                wmp.controls.stop();
+                string temp = wmp.URL;
+                if (temp != "")
+                {
+                    wmp.URL = m_playlist.prevSong();
 
-            if (wmp.URL != "")
-            {
-                wmp.controls.play();
+                    if (wmp.URL != "")
+                    {
+                        wmp.controls.play();
+                    }
+                    else
+                    {
+                        wmp.URL = temp;
+                        wmp.controls.stop();
+                    }
+                    //songtitleTextBox.value = m_playlist.getSongName();// This is totally not the correct name
+                }
             }
-            else
-            {
-                wmp.URL = temp;
-                wmp.controls.stop();
-            }
-            //songtitleTextBox.value = m_playlist.getSongName();// This is totally not the correct name
-            //}
-            //*/
+            
 
         }
 
@@ -136,18 +162,21 @@ namespace HMM_P3
         {
             string temp = wmp.URL;
 
-            wmp.URL = m_playlist.nextSong();
-            if (wmp.URL != "")
+            if (temp != "")
             {
-                wmp.controls.play();
-            }
-            else
-            {
-                wmp.URL = temp;
                 wmp.controls.stop();
+                wmp.URL = m_playlist.nextSong();
+                if (wmp.URL != "")
+                {
+                    wmp.controls.play();
+                }
+                else
+                {
+                    wmp.URL = temp;
+                    //wmp.controls.stop();
+                }
+                //SongtitleTextBox.Value = m_playlist.getSongName();// This is totally not the correct name
             }
-            //SongtitleTextBox.Value = m_playlist.getSongName();// This is totally not the correct name
-
         }
 
         private void volumedown_Click(object sender, EventArgs e)
