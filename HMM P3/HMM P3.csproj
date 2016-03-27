@@ -101,6 +101,7 @@
     </COMReference>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="09_XCOM2_Obey.wav" />
     <Content Include="29_XCOM2_Outpost.wav" />
     <Content Include="54 - A_Rival - Crypt of the Necrodancer OST - Dance of the Decorous %283-2 Cold Remix%29.mp3" />
     <Content Include="62 - A_Rival - Crypt of the Necrodancer OST - Deep Sea Bass %28Coral Riff Remix%29.mp3" />

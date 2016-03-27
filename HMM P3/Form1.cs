@@ -50,8 +50,8 @@ namespace HMM_P3
             if (wmp.URL == "")
             {
                 wmp.URL = m_playlist.getFileName();
+                wmp.controls.stop();
             }
-            wmp.controls.stop();
         }
 
         private void media_PlayStateChange(int state)
@@ -74,6 +74,16 @@ namespace HMM_P3
                 timeBox1.Text = "0:00";
                 timeBox2.Text = "0:00";
 
+            }
+            else if ((WMPLib.WMPPlayState)state == WMPLib.WMPPlayState.wmppsStopped)
+            {
+                timeBox1.Text = "0:00";
+                timeBox2.Text = "0:00";
+                timer1.Stop();
+            }
+            else if ((WMPLib.WMPPlayState)state == WMPLib.WMPPlayState.wmppsPaused)
+            {
+                timer1.Stop();
             }
         }
 
