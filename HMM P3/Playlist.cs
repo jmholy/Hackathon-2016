@@ -114,7 +114,7 @@ namespace HMM_P3
             public PlaylistNode(string name)
             {
                 FileName = name;
-                string[] temp = name.Split('/');
+                string[] temp = name.Split('\\');
                 SongTitle = temp.Last<string>();
                 Prev = null;
                 Next = null;
