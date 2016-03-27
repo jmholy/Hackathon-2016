@@ -49,6 +49,7 @@
             this.pause = new System.Windows.Forms.Button();
             this.play = new System.Windows.Forms.Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.songInfoBox = new System.Windows.Forms.TextBox();
             this.menuStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
@@ -87,7 +88,7 @@
             // addSongsToolStripMenuItem
             // 
             this.addSongsToolStripMenuItem.Name = "addSongsToolStripMenuItem";
-            this.addSongsToolStripMenuItem.Size = new System.Drawing.Size(211, 30);
+            this.addSongsToolStripMenuItem.Size = new System.Drawing.Size(186, 30);
             this.addSongsToolStripMenuItem.Text = "Add Songs";
             this.addSongsToolStripMenuItem.Click += new System.EventHandler(this.addSongsToolStripMenuItem_Click_1);
             // 
@@ -243,11 +244,22 @@
             this.pictureBox1.TabIndex = 14;
             this.pictureBox1.TabStop = false;
             // 
+            // songInfoBox
+            // 
+            this.songInfoBox.BackColor = System.Drawing.SystemColors.ButtonFace;
+            this.songInfoBox.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.songInfoBox.Location = new System.Drawing.Point(167, 436);
+            this.songInfoBox.Name = "songInfoBox";
+            this.songInfoBox.Size = new System.Drawing.Size(510, 19);
+            this.songInfoBox.TabIndex = 15;
+            this.songInfoBox.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(848, 649);
+            this.Controls.Add(this.songInfoBox);
             this.Controls.Add(this.timeBox2);
             this.Controls.Add(this.timeBox1);
             this.Controls.Add(this.progressBar);
@@ -293,6 +305,7 @@
         private System.Windows.Forms.ToolStripMenuItem toolStripMenuItem3;
         private System.Windows.Forms.ToolStripMenuItem addSongsToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem hypnoToad;
+        private System.Windows.Forms.TextBox songInfoBox;
     }
 }
 
