@@ -43,12 +43,12 @@ namespace HMM_P3
 
         private void play_Click(object sender, EventArgs e)
         {
-            
+            wmp.controls.play();
         }
 
         private void pause_Click(object sender, EventArgs e)
         {
-
+            wmp.controls.pause();
         }
 
         private void rewind_Click(object sender, EventArgs e)
