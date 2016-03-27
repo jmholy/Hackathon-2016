@@ -126,14 +126,5 @@ namespace HMM_P3
                     
             }
         }
-
-        private void WMPTest()
-        {
-            //Windows
-            WindowsMediaPlayer wmp = new WindowsMediaPlayer();
-            wmp.URL = "C:\\Users\\Matthew\\Source\\Repos\\mark-is-a-hakr\\HMM P3\\62 - A_Rival - Crypt of the Necrodancer OST - Deep Sea Bass (Coral Riff Remix).mp3";
-            wmp.controls.play();
-        }
-
       }
 }
