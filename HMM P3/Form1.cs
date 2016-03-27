@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Windows.Media;
+using System.Runtime.InteropServices;
 using WMPLib;
 
 
@@ -19,6 +20,12 @@ namespace HMM_P3
         PlaylistContainer m_playlist;
         int sec1 = 0, sec2 = 0;
         int min1 = 0, min2 = 0;
+        private const int APPCOMMAND_VOLUME_UP = 0xA0000;
+        private const int APPCOMMAND_VOLUME_DOWN = 0x90000;
+        private const int WM_APPCOMMAND = 0x319;
+
+        [DllImport("user32.dll")]
+        public static extern IntPtr SendMessageW(IntPtr hWnd, int Msg, IntPtr wParam, IntPtr lParam);
 
         public Form1()
         {
@@ -161,12 +168,12 @@ namespace HMM_P3
 
         private void volumedown_Click(object sender, EventArgs e)
         {
-
+            SendMessageW(Handle, WM_APPCOMMAND, Handle, (IntPtr)APPCOMMAND_VOLUME_DOWN);
         }
 
         private void volumeup_Click(object sender, EventArgs e)
         {
-
+            SendMessageW(Handle, WM_APPCOMMAND, Handle, (IntPtr)APPCOMMAND_VOLUME_UP);
         }
 
 
