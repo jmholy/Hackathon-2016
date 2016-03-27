@@ -10,6 +10,7 @@ using System.Windows.Forms;
 using System.Windows.Media;
 using WMPLib;
 
+
 namespace HMM_P3
 {
     public partial class Form1 : Form
@@ -26,8 +27,8 @@ namespace HMM_P3
         {
             OpenFileDialog fileopener = new OpenFileDialog();
             string filename;
-            //    wmp.PlayStateChange += new AxWMPLib._WMPOCXEvents_PlayStateChangeEventHandler(wmp_PlayStateChange);
-
+            //wmp.PlayStateChange += new AxWMPLib._WMPOCXEvents_PlayStateChangeEventHandler(wmp_PlayStateChange);
+            wmp.PlayStateChange += new Wmp
 
             fileopener.ShowDialog();
 
@@ -36,6 +37,8 @@ namespace HMM_P3
             wmp.URL = filename;
             wmp.controls.play();
             ContainerVisual vis = new ContainerVisual();
+            //vis.VisualXSnappingGuidelines = 10;
+            //vis.VisualYSnappingGuidelines = 10;
         }
 
         private void play_Click(object sender, EventArgs e)
@@ -115,19 +118,6 @@ namespace HMM_P3
         {
             progressBar.Increment(5);
             
-        }
-
-        private void loadToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            OpenFileDialog fileopener = new OpenFileDialog();
-            
-            fileopener.Multiselect = true;
-            fileopener.ShowDialog();
-
-            foreach (string filename in fileopener.FileNames)
-            {
-                m_playlist.addSong(filename);
-            }
         }
     }
 }
