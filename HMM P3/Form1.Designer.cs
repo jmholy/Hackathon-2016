@@ -130,7 +130,7 @@
             // 
             this.progressBar.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.progressBar.ForeColor = System.Drawing.SystemColors.InfoText;
+            this.progressBar.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
             this.progressBar.Location = new System.Drawing.Point(10, 468);
             this.progressBar.Name = "progressBar";
             this.progressBar.Size = new System.Drawing.Size(824, 25);
@@ -153,8 +153,8 @@
             this.filesToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.addSongsToolStripMenuItem});
             this.filesToolStripMenuItem.Name = "filesToolStripMenuItem";
-            this.filesToolStripMenuItem.Size = new System.Drawing.Size(58, 29);
-            this.filesToolStripMenuItem.Text = "Files";
+            this.filesToolStripMenuItem.Size = new System.Drawing.Size(74, 29);
+            this.filesToolStripMenuItem.Text = "Songs";
             // 
             // addSongsToolStripMenuItem
             // 
