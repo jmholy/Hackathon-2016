@@ -162,8 +162,11 @@ namespace HMM_P3
         private void timer1_Tick(object sender, EventArgs e)
         {
             int duration = (int)wmp.currentMedia.duration;
-            progressBar.Maximum = 824;
-            progressBar.Increment(824 / duration);
+            progressBar.Maximum = 780;
+            if (duration != 0)
+            {
+                progressBar.Increment(824 / duration);
+            }
             if (timeBox2.Text == "0:00" && timeBox1.Text == "0:00")
             {
                 sec2 = duration % 60;
