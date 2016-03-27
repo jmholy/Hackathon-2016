@@ -17,6 +17,8 @@ namespace HMM_P3
     {
         WindowsMediaPlayer wmp;
         PlaylistContainer m_playlist;
+        int sec1 = 0, sec2 = 0;
+        int min1 = 0, min2 = 0;
 
         public Form1()
         {
@@ -27,6 +29,7 @@ namespace HMM_P3
         {
             wmp = new WindowsMediaPlayerClass();
             m_playlist = new PlaylistContainer();
+            timer1.Interval = 1000;
         }
 
 
@@ -45,16 +48,19 @@ namespace HMM_P3
             {
                 wmp.URL = m_playlist.getFileName();
             }
+            wmp.controls.stop();
         }
 
         private void pause_Click(object sender, EventArgs e)
         {
             wmp.controls.pause();
+            timer1.Stop();
         }
 
         private void play_Click(object sender, EventArgs e)
         {
             wmp.controls.play();
+            timer1.Start();
         }
 
         private void progressBar_Click(object sender, EventArgs e)
@@ -125,6 +131,36 @@ namespace HMM_P3
 //                case 0:
                     
             }
+        }
+
+        private void timer1_Tick(object sender, EventArgs e)
+        {
+            int duration = (int)wmp.currentMedia.duration;
+            progressBar.Maximum = 846;
+            progressBar.Increment(846 / duration);
+            if (timeBox2.Text == "0:00" && timeBox1.Text == "0:00")
+            {
+                sec2 = duration % 60;
+                min2 = duration / 60;
+            }
+            timeBox1.Text = min1 + ":" + sec1.ToString("D2");
+            sec1++;
+            if (sec1 == 60)
+            {
+                min1++;
+                sec1 = 0;
+            }
+            timeBox2.Text = min2 + ":" + sec2.ToString("D2");
+            if (sec2 == 0)
+            {
+                min2--;
+                sec2 = 60;
+            }
+            if (timeBox2.Text == "0:00" && timeBox1.Text == Convert.ToString(duration))
+            {
+                timer1.Stop();
+            }
+
         }
       }
 }
