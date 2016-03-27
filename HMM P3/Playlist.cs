@@ -22,6 +22,15 @@ namespace HMM_P3
             Curr = null;
         }
 
+        public PlaylistContainer(string[] Folder)
+        {
+            Curr = new PlaylistNode(Folder[0]);
+            for (int i = 1; i < Folder.Length; i++)
+            {
+                addSong(Folder[i]);
+            }
+        }
+
         public void addSong()
         {
             PlaylistNode Temp;
@@ -68,10 +77,10 @@ namespace HMM_P3
             if (Curr.Next != null)
             {
                 Curr = Curr.Next;
-                return null;
+                return Curr.FileName;
             }
-
-            return Curr.FileName;
+            return null;
+            
         }
 
         public string prevSong()
