@@ -53,14 +53,15 @@ namespace HMM_P3
                 if (wmp.URL != "")
                 {
                     wmp.controls.play();
+                    songInfoBox.Text = "Song Title: " + m_playlist.getSongName();
                 }
                 else
                 {
                     wmp.URL = temp;
                     wmp.controls.stop();
                     timer1.Stop();
-                timeBox1.Text = "0:00";
-                timeBox2.Text = "0:00";
+                    timeBox1.Text = "0:00";
+                    timeBox2.Text = "0:00";
                 }
 
                 min1 = 0;
@@ -95,8 +96,8 @@ namespace HMM_P3
         {
             if (wmp.URL != null)
             {
-            wmp.controls.pause();
-            timer1.Stop();
+                wmp.controls.pause();
+                timer1.Stop();
             }
         }
 
@@ -106,6 +107,7 @@ namespace HMM_P3
             {
                 timer1.Start();
                 wmp.controls.play();
+                songInfoBox.Text = "Song Title: " + m_playlist.getSongName();
              }
 
         }
@@ -134,13 +136,13 @@ namespace HMM_P3
                     if (wmp.URL != "")
                     {
                         wmp.controls.play();
+                        songInfoBox.Text = "Song Title: " + m_playlist.getSongName();
                     }
                     else
                     {
                         wmp.URL = temp;
                         wmp.controls.stop();
                     }
-                    //songtitleTextBox.value = m_playlist.getSongName();// This is totally not the correct name
                 }
             }
         }
@@ -153,16 +155,16 @@ namespace HMM_P3
             {
                 wmp.controls.stop();
                 wmp.URL = m_playlist.nextSong();
-            if (wmp.URL != "")
-            {
-                wmp.controls.play();
-            }
-            else
-            {
-                wmp.URL = temp;
-                //wmp.controls.stop();
-            }
-            //SongtitleTextBox.Value = m_playlist.getSongName();// This is totally not the correct name
+                if (wmp.URL != "")
+                {
+                    wmp.controls.play();
+                    songInfoBox.Text = "Song Title: " + m_playlist.getSongName();
+                }
+                else
+                {
+                    wmp.URL = temp;
+                    //wmp.controls.stop();
+                }   
             }
         }
 

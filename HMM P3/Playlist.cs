@@ -94,18 +94,7 @@ namespace HMM_P3
         }
 
         }
-        /*        public void Alphasort(bool normal)
-                {
-                    if (normal)
-                    {
 
-                    }
-                    else
-                    {
-
-                    }
-                }
-        */
         internal class PlaylistNode
         {
             internal string SongTitle;
@@ -119,16 +108,25 @@ namespace HMM_P3
                 SongTitle = temp[temp.Length-1];
                 temp = SongTitle.Split('.');
                 SongTitle = temp[0];
+
                 Prev = null;
                 Next = null;
             }
             public PlaylistNode(string name, PlaylistNode CompleteList)
             {
                 FileName = name;
-                string[] temp = name.Split('/');
-                SongTitle = temp.Last<string>();
+                string[] temp = name.Split('\\');
+                SongTitle = temp[temp.Length - 1];
+                temp = SongTitle.Split('.');
+                SongTitle = temp[0];
+
                 Prev = CompleteList;
                 Next = CompleteList.Next;
+                if (CompleteList.Next != null)
+                {
+                    CompleteList.Next.Prev = this;
+                }
+
                 CompleteList.Next = this;
             }
         }
