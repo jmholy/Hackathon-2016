@@ -11,15 +11,15 @@ namespace HMM_P3
     {
         PlaylistNode Curr;
 
+        public PlaylistContainer()
+        {
+            Curr = null;
+        }
+
         public PlaylistContainer(string FileName)
         {
             Curr = new PlaylistNode(FileName);
 
-        }
-
-        public PlaylistContainer()
-        {
-            Curr = null;
         }
 
         public PlaylistContainer(string[] Folder)
@@ -79,14 +79,17 @@ namespace HMM_P3
                 Curr = Curr.Next;
                 return Curr.FileName;
             }
-            return null;
-            
+            return null;  
         }
 
         public string prevSong()
         {
-            Curr = Curr.Prev;
-            return Curr.FileName;
+            if (Curr.Prev != null)
+            {
+                Curr = Curr.Prev;
+                return Curr.FileName;
+            }
+            return null;
         }
 
         }

@@ -67,11 +67,11 @@ namespace HMM_P3
                 wmp.controls.play();
             }
             else
-            {
+            {*/
                 string temp = m_playlist.getFileName();
-                wmp.URL = m_playlist.prevSong;
+                wmp.URL = m_playlist.prevSong();
 
-                if (wmp.URL != null)
+                if (wmp.URL != "")
                 {
                     wmp.controls.play();
                 }
@@ -80,9 +80,9 @@ namespace HMM_P3
                     wmp.URL = temp;
                     wmp.controls.stop();
                 }
-                songtitleTextBox.value = m_playlist.getSongName();// This is totally not the correct name
-            }
-            */
+                //songtitleTextBox.value = m_playlist.getSongName();// This is totally not the correct name
+            //}
+            //*/
 
         }
 
@@ -91,7 +91,7 @@ namespace HMM_P3
             string temp = wmp.URL;
 
             wmp.URL = m_playlist.nextSong();
-            if (wmp.URL != null)
+            if (wmp.URL != "")
             {
                 wmp.controls.play();
             }
@@ -138,7 +138,10 @@ namespace HMM_P3
                 m_playlist.addSong(filename);
             }
 
-            wmp.URL = m_playlist.getFileName();
+            if (wmp.URL == "")
+            {
+                wmp.URL = m_playlist.getFileName();
+            }
         }
     }
 }
