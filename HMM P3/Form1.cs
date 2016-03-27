@@ -115,15 +115,9 @@ namespace HMM_P3
         {
             if (wmp.URL != "")
             {
-                string urlstringS = "https://www.google.com/search?q=google+videos&oq=google+videos&aqs=chrome..69i57j0l5.1499j0j7&sourceid=chrome&ie=UTF-8#q=music&tbm=vid&tbs=dur:s";
-                Encoding ascii = Encoding.ASCII;
-                Encoding unicode = Encoding.Unicode;
-                byte[] unicodeBytes = unicode.GetBytes(urlstringS);
-                var stringy = Encoding.Unicode.GetString(unicodeBytes);
                 timer1.Start();
-                //webBrowser.Url = stringy;
                 wmp.controls.play();
-            }
+             }
 
         }
 
