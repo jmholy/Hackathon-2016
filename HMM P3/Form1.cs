@@ -28,7 +28,7 @@ namespace HMM_P3
             OpenFileDialog fileopener = new OpenFileDialog();
             string filename;
             //wmp.PlayStateChange += new AxWMPLib._WMPOCXEvents_PlayStateChangeEventHandler(wmp_PlayStateChange);
-            wmp.PlayStateChange += new Wmp
+            //wmp.PlayStateChange += new WMPLib.
 
             fileopener.ShowDialog();
 
