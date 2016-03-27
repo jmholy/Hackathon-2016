@@ -27,8 +27,8 @@ namespace HMM_P3
         {
             OpenFileDialog fileopener = new OpenFileDialog();
             string filename;
-        //    wmp.PlayStateChange += new AxWMPLib._WMPOCXEvents_PlayStateChangeEventHandler(wmp_PlayStateChange);
-
+            //wmp.PlayStateChange += new AxWMPLib._WMPOCXEvents_PlayStateChangeEventHandler(wmp_PlayStateChange);
+            wmp.PlayStateChange += new Wmp
 
             fileopener.ShowDialog();
 
@@ -37,8 +37,8 @@ namespace HMM_P3
             wmp.URL = filename;
             wmp.controls.play();
             ContainerVisual vis = new ContainerVisual();
-            vis.VisualXSnappingGuidelines = 10;
-            vis.VisualYSnappingGuidelines = 10;
+            //vis.VisualXSnappingGuidelines = 10;
+            //vis.VisualYSnappingGuidelines = 10;
         }
 
         private void play_Click(object sender, EventArgs e)

@@ -34,6 +34,20 @@ namespace HMM_P3
             }
         }
 
+        public void addSong (string fileName)
+        {
+            PlaylistNode Temp;
+
+            if (Curr != null)
+            {
+                Temp = new PlaylistNode(fileName, Curr);
+            }
+            else
+            {
+                Curr = new PlaylistNode(fileName);
+            }
+        }
+
         public string getSongName()
         {
             return Curr.SongTitle;
