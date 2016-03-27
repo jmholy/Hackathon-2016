@@ -17,11 +17,6 @@ namespace HMM_P3
 
         }
 
-        public PlaylistContainer()
-        {
-            Curr = null;
-        }
-
         public void addSong()
         {
             PlaylistNode Temp;
@@ -67,11 +62,6 @@ namespace HMM_P3
         public string prevSong()
         {
             Curr = Curr.Prev;
-            return Curr.FileName;
-        }
-
-        public string getFileName()
-        {
             return Curr.FileName;
         }
         /*        public void Alphasort(bool normal)
