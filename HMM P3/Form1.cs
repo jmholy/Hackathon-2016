@@ -122,22 +122,20 @@ namespace HMM_P3
                 string temp = wmp.URL;
                 if (temp != "")
                 {
-            wmp.URL = m_playlist.prevSong();
+                    wmp.URL = m_playlist.prevSong();
 
-            if (wmp.URL != "")
-            {
-                wmp.controls.play();
-            }
-            else
-            {
-                wmp.URL = temp;
-                wmp.controls.stop();
-            }
-            //songtitleTextBox.value = m_playlist.getSongName();// This is totally not the correct name
+                    if (wmp.URL != "")
+                    {
+                        wmp.controls.play();
+                    }
+                    else
+                    {
+                        wmp.URL = temp;
+                        wmp.controls.stop();
+                    }
+                    //songtitleTextBox.value = m_playlist.getSongName();// This is totally not the correct name
                 }
             }
-            
-
         }
 
         private void skipforward_Click(object sender, EventArgs e)
@@ -147,7 +145,7 @@ namespace HMM_P3
             if (temp != "")
             {
                 wmp.controls.stop();
-            wmp.URL = m_playlist.nextSong();
+                wmp.URL = m_playlist.nextSong();
             if (wmp.URL != "")
             {
                 wmp.controls.play();
@@ -155,7 +153,7 @@ namespace HMM_P3
             else
             {
                 wmp.URL = temp;
-                    //wmp.controls.stop();
+                //wmp.controls.stop();
             }
             //SongtitleTextBox.Value = m_playlist.getSongName();// This is totally not the correct name
             }
@@ -171,14 +169,6 @@ namespace HMM_P3
 
         }
 
-        private void wmp_PlayStateChange(object sender, AxWMPLib._WMPOCXEvents_PlayStateChangeEvent e)
-        {
-            switch(e.newState)
-            {
-//                case 0:
-                    
-            }
-        }
 
         private void timer1_Tick(object sender, EventArgs e)
         {
